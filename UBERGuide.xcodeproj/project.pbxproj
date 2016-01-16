@@ -17,6 +17,7 @@
 		0D5A78B71C4A285400980481 /* UBERGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A78B61C4A285400980481 /* UBERGuideUITests.swift */; };
 		0D5C53F31C4A516200ED92CF /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5C53F21C4A516200ED92CF /* AVOSCloud.framework */; };
 		0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */; };
+		0DA570161C4A8D4A007BD988 /* WaitDriverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */; };
 		0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */; };
 		3657B4EC574DAD6F18C4EDEA /* Pods_UBERGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */; };
 		5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501151991C4A33C50049022A /* RLMSupport.swift */; };
@@ -75,6 +76,8 @@
 		0D5C53F21C4A516200ED92CF /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		0D5C53F71C4A53B400ED92CF /* LookForRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookForRideViewController.h; sourceTree = "<group>"; };
 		0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookForRideViewController.m; sourceTree = "<group>"; };
+		0DA570141C4A8D4A007BD988 /* WaitDriverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitDriverViewController.h; sourceTree = "<group>"; };
+		0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitDriverViewController.m; sourceTree = "<group>"; };
 		0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWelcomeViewController.h; sourceTree = "<group>"; };
 		0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWelcomeViewController.m; sourceTree = "<group>"; };
 		501151991C4A33C50049022A /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				5060B8EC1C4A5165004B040C /* TagViewController.swift */,
 				0D5C53F71C4A53B400ED92CF /* LookForRideViewController.h */,
 				0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */,
+				0DA570141C4A8D4A007BD988 /* WaitDriverViewController.h */,
+				0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				TargetAttributes = {
 					0D5A78921C4A285400980481 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9QJ8M25J77;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -487,6 +493,7 @@
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
 				5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
+				0DA570161C4A8D4A007BD988 /* WaitDriverViewController.m in Sources */,
 				501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
