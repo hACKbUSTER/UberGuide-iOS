@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PYn-Iu-fIR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -33,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Traveler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-vb-I5W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Traveler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-vb-I5W">
                                 <rect key="frame" x="223.5" y="300" width="154" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="waF-jR-1IM"/>
@@ -42,7 +41,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-bG-6eN" customClass="FBShimmeringView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-bG-6eN" customClass="FBShimmeringView">
                                 <rect key="frame" x="140" y="80" width="320" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -81,54 +80,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
-                                <rect key="frame" x="40" y="70" width="520" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
+                                <rect key="frame" x="127" y="282" width="326" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
-                                <rect key="frame" x="159" y="114" width="281.5" height="95.5"/>
-                                <string key="text">Discover
-</string>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="80"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-Zf-Hx9" customClass="UIScrollView">
-                                <rect key="frame" x="0.0" y="245.5" width="600" height="354"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="287.5" id="KJx-OQ-dsh"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KJx-OQ-dsh"/>
-                                    </mask>
-                                </variation>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAT-UD-4aP">
+                                <rect key="frame" x="275" y="340" width="30" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
+                                <rect key="frame" x="150" y="340" width="281.5" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="top" secondItem="7Xy-XG-TPG" secondAttribute="bottom" constant="50" id="6xL-4p-z7E"/>
-                            <constraint firstItem="nEB-Zf-Hx9" firstAttribute="top" secondItem="5h6-ke-ql6" secondAttribute="bottom" constant="36" id="NLE-Xb-eyL"/>
-                            <constraint firstItem="5h6-ke-ql6" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="8" id="QEr-GT-jKj"/>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="leading" secondItem="SGe-2t-Crj" secondAttribute="leadingMargin" constant="20" id="Stw-gr-8cx"/>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="ZMY-6z-yHa"/>
-                            <constraint firstItem="nEB-Zf-Hx9" firstAttribute="leading" secondItem="SGe-2t-Crj" secondAttribute="leadingMargin" constant="-20" id="hRe-nk-IjM"/>
-                            <constraint firstItem="fjy-zH-kUY" firstAttribute="top" secondItem="nEB-Zf-Hx9" secondAttribute="bottom" id="jg3-Gp-WsD"/>
-                            <constraint firstItem="5h6-ke-ql6" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="nc0-Na-bHi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nEB-Zf-Hx9" secondAttribute="trailing" constant="-20" id="wC3-o6-Lsz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="In6-Cd-lO7" secondAttribute="trailing" constant="20" id="zI2-eS-kow"/>
+                            <constraint firstItem="YAT-UD-4aP" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="Frh-ii-E5H"/>
+                            <constraint firstItem="5h6-ke-ql6" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="KtC-9X-CTe"/>
+                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="Lwh-vF-uNv"/>
+                            <constraint firstItem="YAT-UD-4aP" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="20" id="Txm-ok-Jzp"/>
+                            <constraint firstItem="5h6-ke-ql6" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="30" id="UcZ-e0-soK"/>
+                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerY" secondItem="SGe-2t-Crj" secondAttribute="centerY" constant="-100" id="erZ-LA-ZNC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ZMY-6z-yHa"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="bottomScrollView" destination="nEB-Zf-Hx9" id="8QT-KF-3Ib"/>
+                        <outlet property="discoverTagLabel" destination="5h6-ke-ql6" id="xmv-ke-qEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsz-t0-4YR" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -39,6 +39,11 @@
     [self.view addGestureRecognizer:gesture];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)swipe:(UISwipeGestureRecognizer *)gesture
 {
     if(gesture.state == UIGestureRecognizerStateEnded)
