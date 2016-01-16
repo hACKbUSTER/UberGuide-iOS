@@ -38,6 +38,13 @@
 		5060B8F41C4A5165004B040C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EF1C4A5165004B040C /* API.swift */; };
 		5060B8F61C4A7BBB004B040C /* UberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8F51C4A7BBB004B040C /* UberAuth.swift */; };
 		5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8F81C4A7F0E004B040C /* Constants.swift */; };
+		5060B8FB1C4A985C004B040C /* RideProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8FA1C4A985C004B040C /* RideProgressViewController.swift */; };
+		5060B8FD1C4A9B3A004B040C /* RideInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8FC1C4A9B3A004B040C /* RideInfo.swift */; };
+		5060B8FF1C4A9C7E004B040C /* RideInfoMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5060B8FE1C4A9C7E004B040C /* RideInfoMessage.xib */; };
+		5060B9011C4A9D1C004B040C /* RideInfoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B9001C4A9D1C004B040C /* RideInfoViews.swift */; };
+		5060B9031C4AB1F4004B040C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B9021C4AB1F4004B040C /* Extensions.swift */; };
+		5060B9051C4AB56F004B040C /* RideInfoProgress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5060B9041C4AB56F004B040C /* RideInfoProgress.xib */; };
+		5060B9071C4ABB60004B040C /* RideInfoLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5060B9061C4ABB60004B040C /* RideInfoLocation.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +109,13 @@
 		5060B8EF1C4A5165004B040C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5060B8F51C4A7BBB004B040C /* UberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberAuth.swift; sourceTree = "<group>"; };
 		5060B8F81C4A7F0E004B040C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5060B8FA1C4A985C004B040C /* RideProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideProgressViewController.swift; sourceTree = "<group>"; };
+		5060B8FC1C4A9B3A004B040C /* RideInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideInfo.swift; sourceTree = "<group>"; };
+		5060B8FE1C4A9C7E004B040C /* RideInfoMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RideInfoMessage.xib; sourceTree = "<group>"; };
+		5060B9001C4A9D1C004B040C /* RideInfoViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideInfoViews.swift; sourceTree = "<group>"; };
+		5060B9021C4AB1F4004B040C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5060B9041C4AB56F004B040C /* RideInfoProgress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RideInfoProgress.xib; sourceTree = "<group>"; };
+		5060B9061C4ABB60004B040C /* RideInfoLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RideInfoLocation.xib; sourceTree = "<group>"; };
 		509075C51C4A290A006CF6DE /* UBERGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBERGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBERGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788059D97CC37E89D00C6B7 /* Pods-UBERGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBERGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBERGuide/Pods-UBERGuide.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,11 +163,12 @@
 				0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */,
 				0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */,
 				0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */,
-				5060B8EC1C4A5165004B040C /* TagViewController.swift */,
 				0D5C53F71C4A53B400ED92CF /* LookForRideViewController.h */,
 				0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */,
 				0DA570141C4A8D4A007BD988 /* WaitDriverViewController.h */,
 				0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */,
+				5060B8EC1C4A5165004B040C /* TagViewController.swift */,
+				5060B8FA1C4A985C004B040C /* RideProgressViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -163,7 +178,11 @@
 			children = (
 				0D5A789A1C4A285400980481 /* Main.storyboard */,
 				5060B8EB1C4A5165004B040C /* TagCell.xib */,
+				5060B8FE1C4A9C7E004B040C /* RideInfoMessage.xib */,
+				5060B9041C4AB56F004B040C /* RideInfoProgress.xib */,
+				5060B9061C4ABB60004B040C /* RideInfoLocation.xib */,
 				5060B8ED1C4A5165004B040C /* TagViews.swift */,
+				5060B9001C4A9D1C004B040C /* RideInfoViews.swift */,
 				501151BC1C4A6DA40049022A /* lookingAnimationView.h */,
 				501151BD1C4A6DA40049022A /* lookingAnimationView.m */,
 				501151BF1C4A93660049022A /* circleLoadingView.h */,
@@ -188,6 +207,7 @@
 			children = (
 				5060B8EE1C4A5165004B040C /* Tag.swift */,
 				5060B8F51C4A7BBB004B040C /* UberAuth.swift */,
+				5060B8FC1C4A9B3A004B040C /* RideInfo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -264,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				5060B8F81C4A7F0E004B040C /* Constants.swift */,
+				5060B9021C4AB1F4004B040C /* Extensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -407,7 +428,10 @@
 			files = (
 				5060B8F01C4A5165004B040C /* TagCell.xib in Resources */,
 				0D5A78A11C4A285400980481 /* LaunchScreen.storyboard in Resources */,
+				5060B9071C4ABB60004B040C /* RideInfoLocation.xib in Resources */,
 				0D5A789E1C4A285400980481 /* Assets.xcassets in Resources */,
+				5060B8FF1C4A9C7E004B040C /* RideInfoMessage.xib in Resources */,
+				5060B9051C4AB56F004B040C /* RideInfoProgress.xib in Resources */,
 				0D5A789C1C4A285400980481 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,14 +506,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */,
+				5060B9031C4AB1F4004B040C /* Extensions.swift in Sources */,
+				5060B8FB1C4A985C004B040C /* RideProgressViewController.swift in Sources */,
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
 				5060B8F21C4A5165004B040C /* TagViews.swift in Sources */,
 				501151C11C4A93660049022A /* circleLoadingView.m in Sources */,
+				5060B9011C4A9D1C004B040C /* RideInfoViews.swift in Sources */,
 				5060B8F61C4A7BBB004B040C /* UberAuth.swift in Sources */,
 				501151BB1C4A669B0049022A /* UIView+ViewFrameGeometry.m in Sources */,
 				501151B31C4A54840049022A /* LocationManager.m in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
 				5060B8F31C4A5165004B040C /* Tag.swift in Sources */,
+				5060B8FD1C4A9B3A004B040C /* RideInfo.swift in Sources */,
 				5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
