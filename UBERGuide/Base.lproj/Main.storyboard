@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gm7-7a-3iT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -46,6 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="shimmeringView" destination="lZ1-bG-6eN" id="Wea-cQ-NBC"/>
+                        <segue destination="gm7-7a-3iT" kind="presentation" identifier="CityWelcomeSegue" modalTransitionStyle="crossDissolve" id="SUv-Mo-5hA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
                                 <state key="normal" title="Begin Exploring &gt;"/>
                                 <connections>
                                     <action selector="beginExploringButtonPressed:" destination="gm7-7a-3iT" eventType="touchUpInside" id="H4n-B1-R4G"/>
-                                    <segue destination="ZNf-wc-nTx" kind="presentation" animates="NO" id="uQE-NQ-tAG"/>
+                                    <segue destination="ZNf-wc-nTx" kind="presentation" modalTransitionStyle="crossDissolve" id="uQE-NQ-tAG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g6-tC-R2b">
