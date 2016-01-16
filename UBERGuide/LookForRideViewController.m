@@ -9,11 +9,10 @@
 #define buttonWidth 200.0
 #define buttonHeight 60.0
 #import "LookForRideViewController.h"
+#import "UIView+ViewFrameGeometry.h"
 
 @interface LookForRideViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *discoverTagLabel;
-@property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollView;
-
 @end
 
 @implementation LookForRideViewController
@@ -21,18 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)configureBottomView;
-{
-    _bottomScrollView.contentSize = CGSizeMake(_bottomScrollView.frame.size.width*2, _bottomScrollView.frame.size.height);
-    _bottomScrollView.clipsToBounds = NO;
-    _bottomScrollView.pagingEnabled = YES;
+    self.discoverTagLabel.text = @"Discover\nCulture";
     
     UIButton *beginExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    beginExplorationButton.frame = CGRectMake((_bottomScrollView.frame.size.width-buttonWidth)/2, (_bottomScrollView.frame.size.height-buttonHeight)/2, buttonWidth, buttonHeight);
+    beginExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, self.discoverTagLabel.bottom + 40.0f, 200.0f, 60.0f);
     [beginExplorationButton setTitle:@"Begin Your Exploration >" forState:UIControlStateNormal];
-    [_bottomScrollView addSubview:beginExplorationButton];
+    [beginExplorationButton addTarget:self action:@selector(beginExploration:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:beginExplorationButton];
+}
+
+- (void)beginExploration:(id)sender
+{
     
 }
 

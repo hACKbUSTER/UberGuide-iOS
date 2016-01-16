@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PYn-Iu-fIR">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3mo-v1-P82">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="PYn-Iu-fIR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H5w-L0-Fc5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VyZ-YY-04L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92p-2r-qk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1102" y="85"/>
+        </scene>
         <!--Hello Scene View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -44,8 +58,10 @@
                             <constraint firstItem="lZ1-bG-6eN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whV-7F-AyD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hsg-gn-DOQ"/>
                     <connections>
                         <outlet property="shimmeringView" destination="lZ1-bG-6eN" id="Wea-cQ-NBC"/>
+                        <segue destination="gm7-7a-3iT" kind="show" identifier="CityWelcomeSegue" id="SUv-Mo-5hA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,54 +80,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
-                                <rect key="frame" x="40" y="70" width="520" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
+                                <rect key="frame" x="150" y="340" width="281.5" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
-                                <rect key="frame" x="159" y="114" width="281.5" height="95.5"/>
-                                <string key="text">Discover
-</string>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="80"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-Zf-Hx9" customClass="UIScrollView">
-                                <rect key="frame" x="0.0" y="245.5" width="600" height="354"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="287.5" id="KJx-OQ-dsh"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KJx-OQ-dsh"/>
-                                    </mask>
-                                </variation>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAT-UD-4aP">
+                                <rect key="frame" x="275" y="340" width="30" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
+                                <rect key="frame" x="127" y="282" width="326" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="top" secondItem="7Xy-XG-TPG" secondAttribute="bottom" constant="50" id="6xL-4p-z7E"/>
-                            <constraint firstItem="nEB-Zf-Hx9" firstAttribute="top" secondItem="5h6-ke-ql6" secondAttribute="bottom" constant="36" id="NLE-Xb-eyL"/>
-                            <constraint firstItem="5h6-ke-ql6" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="8" id="QEr-GT-jKj"/>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="leading" secondItem="SGe-2t-Crj" secondAttribute="leadingMargin" constant="20" id="Stw-gr-8cx"/>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="ZMY-6z-yHa"/>
-                            <constraint firstItem="nEB-Zf-Hx9" firstAttribute="leading" secondItem="SGe-2t-Crj" secondAttribute="leadingMargin" constant="-20" id="hRe-nk-IjM"/>
-                            <constraint firstItem="fjy-zH-kUY" firstAttribute="top" secondItem="nEB-Zf-Hx9" secondAttribute="bottom" id="jg3-Gp-WsD"/>
-                            <constraint firstItem="5h6-ke-ql6" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="nc0-Na-bHi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nEB-Zf-Hx9" secondAttribute="trailing" constant="-20" id="wC3-o6-Lsz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="In6-Cd-lO7" secondAttribute="trailing" constant="20" id="zI2-eS-kow"/>
+                            <constraint firstItem="YAT-UD-4aP" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="Frh-ii-E5H"/>
+                            <constraint firstItem="5h6-ke-ql6" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="KtC-9X-CTe"/>
+                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="Lwh-vF-uNv"/>
+                            <constraint firstItem="YAT-UD-4aP" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="20" id="Txm-ok-Jzp"/>
+                            <constraint firstItem="5h6-ke-ql6" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="30" id="UcZ-e0-soK"/>
+                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerY" secondItem="SGe-2t-Crj" secondAttribute="centerY" constant="-150" id="erZ-LA-ZNC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ZMY-6z-yHa"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="bottomScrollView" destination="nEB-Zf-Hx9" id="8QT-KF-3Ib"/>
+                        <outlet property="discoverTagLabel" destination="5h6-ke-ql6" id="xmv-ke-qEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsz-t0-4YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,7 +138,7 @@
                                 <state key="normal" title="Begin Exploring &gt;"/>
                                 <connections>
                                     <action selector="beginExploringButtonPressed:" destination="gm7-7a-3iT" eventType="touchUpInside" id="H4n-B1-R4G"/>
-                                    <segue destination="ZNf-wc-nTx" kind="presentation" animates="NO" id="uQE-NQ-tAG"/>
+                                    <segue destination="fHb-nu-rlq" kind="show" id="r3L-1s-gxm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g6-tC-R2b">
@@ -168,6 +165,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZZ-gm-1wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="285" y="85"/>
+        </scene>
+        <!--Tag View Controller-->
+        <scene sceneID="h35-ho-s3e">
+            <objects>
+                <viewController id="fHb-nu-rlq" customClass="TagViewController" customModule="UBERGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zhr-Dn-Hgr"/>
+                        <viewControllerLayoutGuide type="bottom" id="IBC-eu-nlc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gIA-0u-6dL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="ZNf-wc-nTx" kind="show" identifier="openLookForRide" id="3Zc-VP-scu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgh-dP-cPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="85"/>
         </scene>
     </scenes>
 </document>

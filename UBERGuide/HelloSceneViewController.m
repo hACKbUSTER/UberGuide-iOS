@@ -35,13 +35,32 @@
     _shimmeringView.shimmeringOpacity = 0.1;
     _shimmeringView.shimmeringEndFadeDuration = 0.1;
     
+    UISwipeGestureRecognizer *gesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    [self.view addGestureRecognizer:gesture];
+    
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)swipe:(UISwipeGestureRecognizer *)gesture
+{
+    if(gesture.state == UIGestureRecognizerStateEnded)
+    {
+        if(gesture.direction == UISwipeGestureRecognizerDirectionRight)
+        {
+            [self presentCityWelcomeVC];
+        }
+    }
 }
 
 - (void)presentCityWelcomeVC
 {
+    [self performSegueWithIdentifier:@"CityWelcomeSegue" sender:nil];
     // call this when get location from CLLocationManager
-    CityWelcomeViewController *newViewController = [[CityWelcomeViewController alloc] init];
-    [self presentViewController:newViewController animated:NO completion:^(void){}];
 }
 
 - (void)didReceiveMemoryWarning {
