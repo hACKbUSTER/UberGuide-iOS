@@ -27,6 +27,11 @@
     self.title = @"Discover";
     
     _driverProfileImageView.layer.masksToBounds = YES;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
     _driverProfileImageView.layer.cornerRadius = _driverProfileImageView.frame.size.width/2;
 }
 
