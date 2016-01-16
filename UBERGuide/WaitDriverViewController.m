@@ -25,6 +25,9 @@
     // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     self.title = @"Discover";
+    
+    _driverProfileImageView.layer.masksToBounds = YES;
+    _driverProfileImageView.layer.cornerRadius = _driverProfileImageView.frame.size.width/2;
 }
 
 - (void)didReceiveMemoryWarning {
