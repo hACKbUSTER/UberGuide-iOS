@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PYn-Iu-fIR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PYn-Iu-fIR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Traveler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-vb-I5W">
-                                <rect key="frame" x="223.5" y="300" width="154" height="30"/>
+                                <rect key="frame" x="223" y="385" width="154" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="waF-jR-1IM"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-bG-6eN" customClass="FBShimmeringView">
-                                <rect key="frame" x="140" y="80" width="320" height="180"/>
+                                <rect key="frame" x="140" y="165" width="320" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="GM9-7f-KeQ"/>
@@ -56,7 +56,13 @@
                             <constraint firstItem="xcT-vb-I5W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NAu-ke-AsP"/>
                             <constraint firstItem="lZ1-bG-6eN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="NT2-B8-1mR"/>
                             <constraint firstItem="lZ1-bG-6eN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whV-7F-AyD"/>
+                            <constraint firstItem="xcT-vb-I5W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="xZu-It-8JQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NT2-B8-1mR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="hsg-gn-DOQ"/>
                     <connections>
@@ -128,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-Jv-HjX">
-                                <rect key="frame" x="227" y="60" width="146.5" height="36"/>
+                                <rect key="frame" x="227" y="208.5" width="146.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -142,7 +148,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g6-tC-R2b">
-                                <rect key="frame" x="197" y="104" width="207" height="95.5"/>
+                                <rect key="frame" x="197" y="252.5" width="207" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="80"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -154,9 +160,15 @@
                             <constraint firstItem="iYC-I5-xMh" firstAttribute="centerX" secondItem="5D1-KD-xj7" secondAttribute="centerX" id="ID6-Qb-p3A"/>
                             <constraint firstItem="9g6-tC-R2b" firstAttribute="centerX" secondItem="5D1-KD-xj7" secondAttribute="centerX" id="ayZ-l1-hmO"/>
                             <constraint firstItem="9g6-tC-R2b" firstAttribute="top" secondItem="ppz-Jv-HjX" secondAttribute="bottom" constant="8" id="b2h-VW-hWe"/>
+                            <constraint firstItem="9g6-tC-R2b" firstAttribute="centerY" secondItem="5D1-KD-xj7" secondAttribute="centerY" id="fkH-Ni-FgW"/>
                             <constraint firstItem="ppz-Jv-HjX" firstAttribute="top" secondItem="vKx-fc-5Mh" secondAttribute="bottom" constant="40" id="peS-d1-akx"/>
                             <constraint firstItem="ToT-qi-vIY" firstAttribute="top" secondItem="iYC-I5-xMh" secondAttribute="bottom" constant="40" id="sGe-F4-HGQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="peS-d1-akx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="9g6-tC-R2b" id="Dgs-MQ-ZDp"/>
