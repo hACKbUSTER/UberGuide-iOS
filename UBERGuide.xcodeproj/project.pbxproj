@@ -27,6 +27,7 @@
 		501151A51C4A402E0049022A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151A41C4A402E0049022A /* CoreLocation.framework */; };
 		501151A71C4A40360049022A /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151A61C4A40360049022A /* libicucore.tbd */; };
 		501151B01C4A4B110049022A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151AF1C4A4B110049022A /* AVOSCloud.framework */; };
+		501151B31C4A54840049022A /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 501151B21C4A54840049022A /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		501151A41C4A402E0049022A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		501151A61C4A40360049022A /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		501151AF1C4A4B110049022A /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		501151B11C4A54840049022A /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		501151B21C4A54840049022A /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		509075C51C4A290A006CF6DE /* UBERGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBERGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBERGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788059D97CC37E89D00C6B7 /* Pods-UBERGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBERGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBERGuide/Pods-UBERGuide.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				501151991C4A33C50049022A /* RLMSupport.swift */,
+				501151B11C4A54840049022A /* LocationManager.h */,
+				501151B21C4A54840049022A /* LocationManager.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -305,6 +310,11 @@
 				TargetAttributes = {
 					0D5A78921C4A285400980481 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0D5A78A61C4A285400980481 = {
 						CreatedOnToolsVersion = 7.2;
@@ -418,6 +428,7 @@
 			files = (
 				0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */,
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
+				501151B31C4A54840049022A /* LocationManager.m in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,

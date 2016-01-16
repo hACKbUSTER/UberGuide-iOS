@@ -9,6 +9,8 @@
 #import "HelloSceneViewController.h"
 #import "FBShimmeringView.h"
 #import "CityWelcomeViewController.h"
+#import "LocationManager.h"
+
 
 @interface HelloSceneViewController ()
 @property (weak, nonatomic) IBOutlet FBShimmeringView *shimmeringView;
