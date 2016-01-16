@@ -37,6 +37,8 @@
     
     UISwipeGestureRecognizer *gesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     [self.view addGestureRecognizer:gesture];
+    
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
