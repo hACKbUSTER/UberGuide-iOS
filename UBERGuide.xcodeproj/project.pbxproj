@@ -35,6 +35,8 @@
 		5060B8F21C4A5165004B040C /* TagViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8ED1C4A5165004B040C /* TagViews.swift */; };
 		5060B8F31C4A5165004B040C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EE1C4A5165004B040C /* Tag.swift */; };
 		5060B8F41C4A5165004B040C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EF1C4A5165004B040C /* API.swift */; };
+		5060B8F61C4A7BBB004B040C /* UberAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8F51C4A7BBB004B040C /* UberAuth.swift */; };
+		5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8F81C4A7F0E004B040C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		5060B8ED1C4A5165004B040C /* TagViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViews.swift; sourceTree = "<group>"; };
 		5060B8EE1C4A5165004B040C /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		5060B8EF1C4A5165004B040C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5060B8F51C4A7BBB004B040C /* UberAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UberAuth.swift; sourceTree = "<group>"; };
+		5060B8F81C4A7F0E004B040C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		509075C51C4A290A006CF6DE /* UBERGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBERGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBERGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788059D97CC37E89D00C6B7 /* Pods-UBERGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBERGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBERGuide/Pods-UBERGuide.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				5060B8EE1C4A5165004B040C /* Tag.swift */,
+				5060B8F51C4A7BBB004B040C /* UberAuth.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				0D38DA271C4A42FA004365A6 /* Services */,
 				0D38DA261C4A42EA004365A6 /* Views */,
 				0D38DA251C4A42D5004365A6 /* Controllers */,
+				5060B8F71C4A7F03004B040C /* Helpers */,
 				0D5A78961C4A285400980481 /* AppDelegate.swift */,
 				0D5A789D1C4A285400980481 /* Assets.xcassets */,
 				0D5A789F1C4A285400980481 /* LaunchScreen.storyboard */,
@@ -246,6 +252,14 @@
 				501151BA1C4A669B0049022A /* UIView+ViewFrameGeometry.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		5060B8F71C4A7F03004B040C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5060B8F81C4A7F0E004B040C /* Constants.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		6673FA45BC89DE763F0255FA /* Pods */ = {
@@ -463,6 +477,7 @@
 				0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */,
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
 				5060B8F21C4A5165004B040C /* TagViews.swift in Sources */,
+				5060B8F61C4A7BBB004B040C /* UberAuth.swift in Sources */,
 				501151BB1C4A669B0049022A /* UIView+ViewFrameGeometry.m in Sources */,
 				501151B31C4A54840049022A /* LocationManager.m in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
@@ -470,6 +485,7 @@
 				5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
+				5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
 				501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */,
 			);
@@ -617,6 +633,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -676,6 +693,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

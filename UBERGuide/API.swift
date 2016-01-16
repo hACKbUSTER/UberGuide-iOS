@@ -46,4 +46,20 @@ class API {
             }
         }
     }
+    
+    func postToken(token token: String) {
+        let parameters: [NSObject: AnyObject] = [
+            "access_token": token,
+        ]
+        
+        AVCloud.callFunctionInBackground("uber::access_token", withParameters: parameters) { object, error in
+            if let object = object {
+                print(object)
+            }
+            
+            if let error = error {
+                print(error)
+            }
+        }
+    }
 }
