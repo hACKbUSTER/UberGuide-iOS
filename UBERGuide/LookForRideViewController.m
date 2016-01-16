@@ -29,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.discoverTagLabel.text = @"Discover\nCulture";
+    
+    if(self.tripTitle == nil)
+        self.tripTitle = @"Beijing";
+        
+    self.discoverTagLabel.text = [NSString stringWithFormat:@"Discover\n%@",self.tripTitle];//@"Discover\nCulture";
     
     self.beginExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _beginExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, self.discoverTagLabel.bottom + 40.0f, 200.0f, 60.0f);

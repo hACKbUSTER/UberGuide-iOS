@@ -10,4 +10,6 @@
 
 @interface LookForRideViewController : UIViewController
 
+@property (strong, nonatomic) NSString *tripTitle;
+
 @end

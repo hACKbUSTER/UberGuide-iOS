@@ -81,6 +81,20 @@ class TagViewController: UIViewController {
         
         api.postTags(self.selectedTags)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "openLookForRide" {
+            let vc = segue.destinationViewController as! LookForRideViewController
+            if self.selectedTags.count > 1 {
+                vc.tripTitle = "Beijing"
+            } else if selectedTags.count == 1 {
+                let tag = self.selectedTags[0] 
+                vc.tripTitle = tag.enLabel
+            }
+            
+            return
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegate
