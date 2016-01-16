@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1v-Ce-a6v">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1v-Ce-a6v">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC7-jb-b2p">
@@ -28,6 +28,7 @@
             <constraints>
                 <constraint firstItem="VC7-jb-b2p" firstAttribute="leading" secondItem="L1v-Ce-a6v" secondAttribute="leading" id="2aO-kg-ug5"/>
                 <constraint firstAttribute="trailing" secondItem="VC7-jb-b2p" secondAttribute="trailing" id="9p4-1v-tLd"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="top" secondItem="rfx-xk-EB8" secondAttribute="top" id="EAg-QS-D9T"/>
                 <constraint firstItem="L1v-Ce-a6v" firstAttribute="leading" secondItem="rfx-xk-EB8" secondAttribute="leading" id="Fdf-jg-APf"/>
                 <constraint firstAttribute="bottom" secondItem="L1v-Ce-a6v" secondAttribute="bottom" id="VXX-E7-8FT"/>
                 <constraint firstAttribute="bottom" secondItem="VC7-jb-b2p" secondAttribute="bottom" id="Xp0-ZX-TgT"/>

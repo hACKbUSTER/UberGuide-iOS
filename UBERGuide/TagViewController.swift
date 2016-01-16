@@ -56,7 +56,7 @@ class TagViewController: UIViewController {
         nextButton.addTarget(self, action: "next", forControlEvents: .TouchUpInside)
         nextButton.setTitle("Remember What I Like", forState: .Normal)
         nextButton.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:1)
-        nextButton.enabled = false
+        //nextButton.enabled = false
         nextButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -74,7 +74,7 @@ class TagViewController: UIViewController {
     // MARK: - Actions
     
     func next() {
-        print("next")
+        performSegueWithIdentifier("openLookForRide", sender: self)
     }
 }
 
