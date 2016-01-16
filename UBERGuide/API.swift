@@ -6,7 +6,12 @@ class API {
         let parameters: [NSObject: AnyObject] = [:]
         
         AVCloud.callFunctionInBackground("city::tag::get", withParameters: parameters) { object, error in
-            print(error)
+            if let object = object {
+                print(object)
+            }
+            if let error = error {
+                print(error)
+            }
             completionHandler([])
         }
     }

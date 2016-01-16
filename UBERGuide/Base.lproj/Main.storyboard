@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PYn-Iu-fIR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3mo-v1-P82">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="PYn-Iu-fIR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H5w-L0-Fc5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VyZ-YY-04L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92p-2r-qk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1102" y="85"/>
+        </scene>
         <!--Hello Scene View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Traveler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-vb-I5W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Traveler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-vb-I5W">
                                 <rect key="frame" x="223.5" y="300" width="154" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="waF-jR-1IM"/>
@@ -26,7 +42,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-bG-6eN" customClass="FBShimmeringView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZ1-bG-6eN" customClass="FBShimmeringView">
                                 <rect key="frame" x="140" y="80" width="320" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -43,9 +59,10 @@
                             <constraint firstItem="lZ1-bG-6eN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whV-7F-AyD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hsg-gn-DOQ"/>
                     <connections>
                         <outlet property="shimmeringView" destination="lZ1-bG-6eN" id="Wea-cQ-NBC"/>
-                        <segue destination="gm7-7a-3iT" kind="presentation" identifier="CityWelcomeSegue" modalTransitionStyle="crossDissolve" id="SUv-Mo-5hA"/>
+                        <segue destination="gm7-7a-3iT" kind="show" identifier="CityWelcomeSegue" id="SUv-Mo-5hA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
