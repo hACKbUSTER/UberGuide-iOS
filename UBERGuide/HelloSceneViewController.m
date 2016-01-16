@@ -10,6 +10,7 @@
 #import "FBShimmeringView.h"
 #import "CityWelcomeViewController.h"
 #import "LocationManager.h"
+#import "UBERGuide-Swift.h"
 
 
 @interface HelloSceneViewController ()
@@ -53,8 +54,9 @@
 
 - (void)presentCityWelcomeVC
 {
-    [self performSegueWithIdentifier:@"CityWelcomeSegue" sender:nil];
-    // call this when get location from CLLocationManager
+    [UberAuth.sharedInstance authenticate:^{
+        [self performSegueWithIdentifier:@"CityWelcomeSegue" sender:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

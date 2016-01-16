@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  UBERGuide
-//
-//  Created by Fincher Justin on 16/1/16.
-//  Copyright © 2016年 hACKbUSTER. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -44,6 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        var splitUrl = url.absoluteString.componentsSeparatedByString(":")
+            
+        if splitUrl[0] == "uberguide" {
+            print("received redirect")
+            try! UberAuth.sharedInstance.oauth2?.handleRedirectURL(url)
+        }
+            
+        return true
+    }
 
 }
 
