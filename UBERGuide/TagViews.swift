@@ -11,6 +11,6 @@ class TagCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = UIColor.lightGrayColor()
+        text.numberOfLines = 0
     }
 }

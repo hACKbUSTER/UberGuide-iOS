@@ -55,8 +55,8 @@ class TagViewController: UIViewController {
         nextButton = UIButton()
         nextButton.addTarget(self, action: "next", forControlEvents: .TouchUpInside)
         nextButton.setTitle("Remember What I Like", forState: .Normal)
-        nextButton.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:1)
-        //nextButton.enabled = false
+        nextButton.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:0.65)
+        nextButton.enabled = false
         nextButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -68,6 +68,9 @@ class TagViewController: UIViewController {
         nextButton.heightAnchor.constraintEqualToConstant(60).active = true
         
         api.tags(city: "PEK") { tags in
+            print(tags)
+            self.tags = tags
+            self.tagsCollectionViewController.collectionView?.reloadData()
         }
     }
     
@@ -85,12 +88,13 @@ extension TagViewController: UICollectionViewDelegate {
         let selectedTagsId = selectedTags.map { $0.id }
         let tag = tags[indexPath.row].id
         if let index = selectedTagsId.indexOf(tag) {
-            tags.removeAtIndex(index)
+            selectedTags.removeAtIndex(index)
         } else {
-            tags.append(tags[indexPath.row])
+            selectedTags.append(tags[indexPath.row])
         }
         
         nextButton.enabled = selectedTags.count > 0
+        nextButton.backgroundColor = nextButton.enabled ? UIColor(red:0.29, green:0.73, blue:0.89, alpha:1) : UIColor(red:0.29, green:0.73, blue:0.89, alpha:0.65)
 
         tagsCollectionViewController.collectionView?.reloadData()
     }
@@ -111,13 +115,19 @@ extension TagViewController: UICollectionViewDataSource {
         let tag = tags[indexPath.row]
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TagCell", forIndexPath: indexPath) as! TagCell
-        cell.icon.af_setImageWithURL(tag.icon)
+        cell.icon.af_setImageWithURL(tag.icon,
+            placeholderImage: nil,
+            filter: nil,
+            imageTransition: .None,
+            runImageTransitionIfCached: false) { result in
+            }
+        cell.icon.contentMode = .ScaleAspectFill
         cell.text.text = tag.text
         
         if (selectedTags.map { $0.id }).contains(tag.id) {
-            cell.text.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:0.5)
+            cell.text.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:0.65)
         } else {
-            cell.text.backgroundColor = nil
+            cell.text.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0.40)
         }
         
         return cell
