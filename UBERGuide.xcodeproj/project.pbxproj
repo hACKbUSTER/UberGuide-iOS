@@ -89,9 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501151A51C4A402E0049022A /* CoreLocation.framework in Frameworks */,
 				501151B01C4A4B110049022A /* AVOSCloud.framework in Frameworks */,
 				501151A71C4A40360049022A /* libicucore.tbd in Frameworks */,
-				501151A51C4A402E0049022A /* CoreLocation.framework in Frameworks */,
 				501151A31C4A40270049022A /* CoreTelephony.framework in Frameworks */,
 				501151A11C4A401E0049022A /* MobileCoreServices.framework in Frameworks */,
 				5011519F1C4A3FFD0049022A /* SystemConfiguration.framework in Frameworks */,

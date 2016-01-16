@@ -11,7 +11,9 @@
 @interface LocationManager : NSObject
 
 @property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, strong) NSString *currentLocationName;
 
 + (LocationManager *) sharedInstance;
+- (void)startCapture;
 
 @end
