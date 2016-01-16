@@ -25,6 +25,11 @@
 		501151A51C4A402E0049022A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151A41C4A402E0049022A /* CoreLocation.framework */; };
 		501151A71C4A40360049022A /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151A61C4A40360049022A /* libicucore.tbd */; };
 		501151B01C4A4B110049022A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151AF1C4A4B110049022A /* AVOSCloud.framework */; };
+		5060B8F01C4A5165004B040C /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5060B8EB1C4A5165004B040C /* TagCell.xib */; };
+		5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EC1C4A5165004B040C /* TagViewController.swift */; };
+		5060B8F21C4A5165004B040C /* TagViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8ED1C4A5165004B040C /* TagViews.swift */; };
+		5060B8F31C4A5165004B040C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EE1C4A5165004B040C /* Tag.swift */; };
+		5060B8F41C4A5165004B040C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EF1C4A5165004B040C /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		501151A41C4A402E0049022A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		501151A61C4A40360049022A /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		501151AF1C4A4B110049022A /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		5060B8EB1C4A5165004B040C /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		5060B8EC1C4A5165004B040C /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		5060B8ED1C4A5165004B040C /* TagViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViews.swift; sourceTree = "<group>"; };
+		5060B8EE1C4A5165004B040C /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		5060B8EF1C4A5165004B040C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		509075C51C4A290A006CF6DE /* UBERGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBERGuide-Bridging-Header.h"; sourceTree = "<group>"; };
 		6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBERGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7788059D97CC37E89D00C6B7 /* Pods-UBERGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBERGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBERGuide/Pods-UBERGuide.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +127,7 @@
 				0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */,
 				0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */,
 				0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */,
+				5060B8EC1C4A5165004B040C /* TagViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				0D5A789A1C4A285400980481 /* Main.storyboard */,
+				5060B8EB1C4A5165004B040C /* TagCell.xib */,
+				5060B8ED1C4A5165004B040C /* TagViews.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 		0D38DA271C4A42FA004365A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5060B8EF1C4A5165004B040C /* API.swift */,
 				501151991C4A33C50049022A /* RLMSupport.swift */,
 			);
 			name = Services;
@@ -140,6 +154,7 @@
 		0D38DA281C4A4301004365A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5060B8EE1C4A5165004B040C /* Tag.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -332,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5060B8F01C4A5165004B040C /* TagCell.xib in Resources */,
 				0D5A78A11C4A285400980481 /* LaunchScreen.storyboard in Resources */,
 				0D5A789E1C4A285400980481 /* Assets.xcassets in Resources */,
 				0D5A789C1C4A285400980481 /* Main.storyboard in Resources */,
@@ -408,8 +424,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
+				5060B8F21C4A5165004B040C /* TagViews.swift in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
+				5060B8F31C4A5165004B040C /* Tag.swift in Sources */,
+				5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
+				5060B8F41C4A5165004B040C /* API.swift in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,7 +581,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = UBERGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -620,7 +640,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = UBERGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
