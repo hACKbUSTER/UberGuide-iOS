@@ -78,6 +78,8 @@ class TagViewController: UIViewController {
     
     func next() {
         performSegueWithIdentifier("openLookForRide", sender: self)
+        
+        api.postTags(self.selectedTags)
     }
 }
 
