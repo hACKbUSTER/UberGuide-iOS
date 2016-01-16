@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rfx-xk-EB8" customClass="TagCell" customModule="UBERGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L1v-Ce-a6v">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC7-jb-b2p">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="VC7-jb-b2p" firstAttribute="leading" secondItem="L1v-Ce-a6v" secondAttribute="leading" id="2aO-kg-ug5"/>
+                <constraint firstAttribute="trailing" secondItem="VC7-jb-b2p" secondAttribute="trailing" id="9p4-1v-tLd"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="top" secondItem="rfx-xk-EB8" secondAttribute="top" id="EAg-QS-D9T"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="leading" secondItem="rfx-xk-EB8" secondAttribute="leading" id="Fdf-jg-APf"/>
+                <constraint firstAttribute="bottom" secondItem="L1v-Ce-a6v" secondAttribute="bottom" id="VXX-E7-8FT"/>
+                <constraint firstAttribute="bottom" secondItem="VC7-jb-b2p" secondAttribute="bottom" id="Xp0-ZX-TgT"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="bottom" secondItem="VC7-jb-b2p" secondAttribute="bottom" id="g9R-Sa-KdK"/>
+                <constraint firstItem="VC7-jb-b2p" firstAttribute="leading" secondItem="rfx-xk-EB8" secondAttribute="leading" id="gWj-11-gMe"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="centerX" secondItem="VC7-jb-b2p" secondAttribute="centerX" id="jyx-lS-Ory"/>
+                <constraint firstItem="VC7-jb-b2p" firstAttribute="top" secondItem="rfx-xk-EB8" secondAttribute="top" id="kfd-8r-dAr"/>
+                <constraint firstItem="VC7-jb-b2p" firstAttribute="trailing" secondItem="L1v-Ce-a6v" secondAttribute="trailing" id="pPT-HM-FSB"/>
+                <constraint firstItem="L1v-Ce-a6v" firstAttribute="top" secondItem="VC7-jb-b2p" secondAttribute="top" id="pgs-CI-Krn"/>
+                <constraint firstAttribute="trailing" secondItem="L1v-Ce-a6v" secondAttribute="trailing" id="qkH-fu-1yS"/>
+                <constraint firstItem="VC7-jb-b2p" firstAttribute="top" secondItem="rfx-xk-EB8" secondAttribute="top" id="vU0-m3-o42"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="g9R-Sa-KdK"/>
+                    <exclude reference="jyx-lS-Ory"/>
+                    <exclude reference="pgs-CI-Krn"/>
+                    <exclude reference="2aO-kg-ug5"/>
+                    <exclude reference="kfd-8r-dAr"/>
+                    <exclude reference="pPT-HM-FSB"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="icon" destination="L1v-Ce-a6v" id="vbl-0B-TCD"/>
+                <outlet property="text" destination="VC7-jb-b2p" id="QoZ-kE-wnf"/>
+            </connections>
+            <point key="canvasLocation" x="219" y="376"/>
+        </collectionViewCell>
+    </objects>
+</document>
