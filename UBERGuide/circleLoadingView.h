@@ -1,5 +1,5 @@
 //
-//  lookingAnimationView.h
+//  circleLoadingView.h
 //  UBERGuide
 //
 //  Created by 叔 陈 on 16/1/16.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface lookingAnimationView : UIView
+@interface circleLoadingView : UIView
 
 - (void)animate;
-
 @end

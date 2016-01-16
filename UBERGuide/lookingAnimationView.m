@@ -8,12 +8,11 @@
 
 #import "lookingAnimationView.h"
 #import "UIView+ViewFrameGeometry.h"
+#import "circleLoadingView.h"
 
 @interface lookingAnimationView()
 {
-    UIView *_leftCircle;
-    UIView *_centerCircle;
-    UIView *_rightCircle;
+    circleLoadingView *_circleLoading;
     UILabel *_titleLabel;
 }
 
@@ -34,37 +33,21 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        [self initSubView];
+        _circleLoading = [[circleLoadingView alloc]initWithFrame:CGRectMake(0.0f, 0.0f, self.width, 20.0f)];
+        [self addSubview:_circleLoading];
+        
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, _circleLoading.bottom + 10.0f, self.width, 21.0f)];
+        _titleLabel.text = @"Looking for rides";
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = [UIColor blueColor];
+        _titleLabel.font = [UIFont systemFontOfSize:18.0f];
+        [self addSubview:_titleLabel];
     }
     return self;
 }
 
-- (void)initSubView
+- (void)animate
 {
-    CGFloat width = 10.0f;
-    _leftCircle = [[UIView alloc]initWithFrame:CGRectMake((self.width - 7*width)/2.0f, 0.0f, width, width)];
-    _leftCircle.layer.cornerRadius = width/2.0f;
-    _leftCircle.backgroundColor = [UIColor blueColor];
-    
-    _centerCircle = [[UIView alloc]initWithFrame:CGRectMake(_leftCircle.right + width * 2.0f, 0.0f, width, width)];
-    _centerCircle.layer.cornerRadius = width/2.0f;
-    _centerCircle.backgroundColor = [UIColor blueColor];
-    
-    _rightCircle = [[UIView alloc]initWithFrame:CGRectMake(_centerCircle.right + width * 2.0f, 0.0f, width, width)];
-    
-    _rightCircle.layer.cornerRadius = width/2.0f;
-    _rightCircle.backgroundColor = [UIColor blueColor];
-    
-    [self addSubview:_leftCircle];
-    [self addSubview:_centerCircle];
-    [self addSubview:_rightCircle];
-    
-    _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, _centerCircle.bottom + 10.0f, self.width, 21.0f)];
-    _titleLabel.text = @"Looking for rides";
-    _titleLabel.textAlignment = NSTextAlignmentCenter;
-    _titleLabel.textColor = [UIColor blueColor];
-    _titleLabel.font = [UIFont systemFontOfSize:18.0f];
-    [self addSubview:_titleLabel];
+    [_circleLoading animate];
 }
-
 @end

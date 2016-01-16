@@ -51,6 +51,7 @@
     _lookingAnimationView.hidden = NO;
     _beginExplorationButton.hidden = YES;
     _cancelExplorationButton.hidden = NO;
+    [_lookingAnimationView animate];
 }
 
 - (void)cancelExploration:(id)sender
