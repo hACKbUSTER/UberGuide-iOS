@@ -23,7 +23,7 @@
     self.discoverTagLabel.text = @"Discover\nCulture";
     
     UIButton *beginExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    beginExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, self.discoverTagLabel.bottom + 20.0f, 200.0f, 60.0f);
+    beginExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, self.discoverTagLabel.bottom + 40.0f, 200.0f, 60.0f);
     [beginExplorationButton setTitle:@"Begin Your Exploration >" forState:UIControlStateNormal];
     [beginExplorationButton addTarget:self action:@selector(beginExploration:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:beginExplorationButton];

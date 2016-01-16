@@ -80,9 +80,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
-                                <rect key="frame" x="127" y="282" width="326" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
+                                <rect key="frame" x="150" y="340" width="281.5" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,9 +90,9 @@
                                 <rect key="frame" x="275" y="340" width="30" height="2"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-ke-ql6">
-                                <rect key="frame" x="150" y="340" width="281.5" height="95.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You’re about to embark on a trip to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="In6-Cd-lO7">
+                                <rect key="frame" x="127" y="282" width="326" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -104,7 +104,7 @@
                             <constraint firstItem="In6-Cd-lO7" firstAttribute="centerX" secondItem="SGe-2t-Crj" secondAttribute="centerX" id="Lwh-vF-uNv"/>
                             <constraint firstItem="YAT-UD-4aP" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="20" id="Txm-ok-Jzp"/>
                             <constraint firstItem="5h6-ke-ql6" firstAttribute="top" secondItem="In6-Cd-lO7" secondAttribute="bottom" constant="30" id="UcZ-e0-soK"/>
-                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerY" secondItem="SGe-2t-Crj" secondAttribute="centerY" constant="-100" id="erZ-LA-ZNC"/>
+                            <constraint firstItem="In6-Cd-lO7" firstAttribute="centerY" secondItem="SGe-2t-Crj" secondAttribute="centerY" constant="-150" id="erZ-LA-ZNC"/>
                         </constraints>
                     </view>
                     <connections>
