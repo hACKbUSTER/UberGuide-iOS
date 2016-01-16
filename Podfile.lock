@@ -2,12 +2,16 @@ PODS:
   - Alamofire (3.1.4)
   - AlamofireImage (2.2.0):
     - Alamofire (~> 3.1)
+  - p2.OAuth2 (2.1.3):
+    - SwiftKeychain (~> 0.1.5)
   - Shimmer (1.0.2)
+  - SwiftKeychain (0.1.5)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - AlamofireImage (~> 2.2.0)
+  - p2.OAuth2 (~> 2.1.3)
   - Shimmer (~> 1.0.2)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -23,7 +27,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
   AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
+  p2.OAuth2: ce5d6fe61f564354a8267ec3482f0316ae24cfa3
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SwiftKeychain: 1387edad8b56c659daa93d9ffc99526bac5b0088
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
