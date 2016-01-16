@@ -13,7 +13,6 @@
 @interface lookingAnimationView()
 {
     circleLoadingView *_circleLoading;
-    UILabel *_titleLabel;
 }
 
 @end
@@ -39,7 +38,7 @@
         _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, _circleLoading.bottom + 10.0f, self.width, 21.0f)];
         _titleLabel.text = @"Looking for rides";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.textColor = [UIColor blueColor];
+        _titleLabel.textColor = [UIColor colorWithRed:0.29f green:0.73f blue:0.89f alpha:1.0f];;
         _titleLabel.font = [UIFont systemFontOfSize:18.0f];
         [self addSubview:_titleLabel];
     }
@@ -48,6 +47,7 @@
 
 - (void)animate
 {
+    _titleLabel.text = @"Looking for rides";
     [_circleLoading animate];
 }
 @end

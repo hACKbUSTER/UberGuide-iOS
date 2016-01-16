@@ -51,6 +51,13 @@
     }];
 }
 
+- (IBAction)ContactDriver:(id)sender {
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",[[self.dict objectForKey:@"driver"] objectForKey:@"phone_number"]];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
+}
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];

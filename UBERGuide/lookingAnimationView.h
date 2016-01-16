@@ -10,6 +10,8 @@
 
 @interface lookingAnimationView : UIView
 
+@property (strong, nonatomic) UILabel *titleLabel;
+
 - (void)animate;
 
 @end

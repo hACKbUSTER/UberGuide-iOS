@@ -17,6 +17,7 @@
 @interface LookForRideViewController ()
 {
     NSDictionary *dict;
+    BOOL hasBeenCanceled;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *discoverTagLabel;
@@ -35,6 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     dict = [NSDictionary dictionary];
+    hasBeenCanceled = NO;
     
     // Do any additional setup after loading the view.
     
@@ -44,18 +46,23 @@
     self.discoverTagLabel.text = [NSString stringWithFormat:@"Discover\n%@",self.tripTitle];//@"Discover\nCulture";
     
     self.beginExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _beginExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, self.discoverTagLabel.bottom + 40.0f, 200.0f, 60.0f);
+    _beginExplorationButton.frame = CGRectMake(0.0f, ScreenHeight - 60.0f, ScreenWidth, 60.0f);
     [_beginExplorationButton setTitle:@"Begin Your Exploration >" forState:UIControlStateNormal];
+    [_beginExplorationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _beginExplorationButton.backgroundColor = [UIColor colorWithRed:0.29f green:0.73f blue:0.89f alpha:1.0f];
     [_beginExplorationButton addTarget:self action:@selector(beginExploration:) forControlEvents:UIControlEventTouchUpInside];
     
     self.cancelExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _cancelExplorationButton.frame = CGRectMake(ScreenWidth/2.0f - 100.0f, ScreenHeight - 100.0f , 200.0f, 60.0f);
+    _cancelExplorationButton.frame = CGRectMake(0.0f, ScreenHeight - 60.0f, ScreenWidth, 60.0f);
     [_cancelExplorationButton setTitle:@"Cancel this trip" forState:UIControlStateNormal];
+    [_cancelExplorationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _cancelExplorationButton.backgroundColor = [UIColor redColor];
     [_cancelExplorationButton addTarget:self action:@selector(cancelExploration:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_cancelExplorationButton];
     _cancelExplorationButton.hidden = YES;
+    _cancelExplorationButton.alpha = 0.0f;
     
-    self.lookingAnimationView = [[lookingAnimationView alloc] initWithFrame:_beginExplorationButton.frame];
+    self.lookingAnimationView = [[lookingAnimationView alloc] initWithFrame:CGRectMake(0.0f, _discoverTagLabel.bottom + 40.0f, ScreenWidth, 60.0f)];
     [self.view addSubview:_lookingAnimationView];
     _lookingAnimationView.hidden = YES;
     
@@ -64,10 +71,16 @@
 
 - (void)beginExploration:(id)sender
 {
-    _lookingAnimationView.hidden = NO;
-    _beginExplorationButton.hidden = YES;
     _cancelExplorationButton.hidden = NO;
-    [_lookingAnimationView animate];
+    [UIView animateWithDuration:0.3f animations:^{
+        _beginExplorationButton.alpha = 0.0f;
+        _cancelExplorationButton.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        _lookingAnimationView.hidden = NO;
+        _beginExplorationButton.hidden = YES;
+        [_lookingAnimationView animate];
+    }];
+
     API *api = [[API alloc]init];
     [api updateStateWithState:@"completed" completionHandler:^{
         [api request];
@@ -79,8 +92,9 @@
 {
     API *api = [[API alloc]init];
     [api updateStateWithState:@"accepted" completionHandler:^{
+        _lookingAnimationView.titleLabel.text = @"Request accepted";
         [api updateStateWithState:@"arriving" completionHandler:^{
-            [self performSelector:@selector(requestCurrent:) withObject:nil afterDelay:2.0f];
+            [self performSelector:@selector(requestCurrent:) withObject:nil afterDelay:0.0f];
         }];
     }];
 }
@@ -90,15 +104,35 @@
     API *api = [[API alloc]init];
     [api requestCurrent:^(id object) {
         dict = [object objectForKey:@"data"];
+        if(hasBeenCanceled)
+        {
+            hasBeenCanceled = NO;
+            return;
+        }
         [self performSegueWithIdentifier:@"GetDriverSegue" sender:self];
     }];
 }
 
 - (void)cancelExploration:(id)sender
 {
-    _lookingAnimationView.hidden = YES;
-    _beginExplorationButton.hidden = NO;
-    _cancelExplorationButton.hidden = YES;
+    API *api = [[API alloc]init];
+    hasBeenCanceled = YES;
+    [api updateStateWithState:@"completed" completionHandler:^{
+        NSLog(@"canceled anyway!");
+        
+        _beginExplorationButton.hidden = NO;
+        [UIView animateWithDuration:0.3f animations:^{
+            _lookingAnimationView.alpha = 0.0f;
+            _beginExplorationButton.alpha = 1.0f;
+            _cancelExplorationButton.alpha = 0.0f;
+        } completion:^(BOOL finished) {
+            _lookingAnimationView.hidden = YES;
+            _lookingAnimationView.alpha = 1.0f;
+            _lookingAnimationView.titleLabel.text = @"Looking for rides";
+            _cancelExplorationButton.hidden = YES;
+        }];
+
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
