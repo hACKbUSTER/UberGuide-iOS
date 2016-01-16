@@ -15,6 +15,8 @@
 		0D5A78A11C4A285400980481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A789F1C4A285400980481 /* LaunchScreen.storyboard */; };
 		0D5A78AC1C4A285400980481 /* UBERGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A78AB1C4A285400980481 /* UBERGuideTests.swift */; };
 		0D5A78B71C4A285400980481 /* UBERGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A78B61C4A285400980481 /* UBERGuideUITests.swift */; };
+		0D5C53F31C4A516200ED92CF /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5C53F21C4A516200ED92CF /* AVOSCloud.framework */; };
+		0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */; };
 		0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */; };
 		3657B4EC574DAD6F18C4EDEA /* Pods_UBERGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */; };
 		5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501151991C4A33C50049022A /* RLMSupport.swift */; };
@@ -60,6 +62,9 @@
 		0D5A78B21C4A285400980481 /* UBERGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBERGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5A78B61C4A285400980481 /* UBERGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBERGuideUITests.swift; sourceTree = "<group>"; };
 		0D5A78B81C4A285400980481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D5C53F21C4A516200ED92CF /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		0D5C53F71C4A53B400ED92CF /* LookForRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookForRideViewController.h; sourceTree = "<group>"; };
+		0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookForRideViewController.m; sourceTree = "<group>"; };
 		0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWelcomeViewController.h; sourceTree = "<group>"; };
 		0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWelcomeViewController.m; sourceTree = "<group>"; };
 		501151991C4A33C50049022A /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 				0D38DA1E1C4A348A004365A6 /* Realm.framework in Frameworks */,
 				5011519C1C4A33D70049022A /* libc++.tbd in Frameworks */,
 				3657B4EC574DAD6F18C4EDEA /* Pods_UBERGuide.framework in Frameworks */,
+				0D5C53F31C4A516200ED92CF /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +123,8 @@
 				0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */,
 				0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */,
 				0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */,
+				0D5C53F71C4A53B400ED92CF /* LookForRideViewController.h */,
+				0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 		0D5A788A1C4A285400980481 = {
 			isa = PBXGroup;
 			children = (
+				0D5C53F21C4A516200ED92CF /* AVOSCloud.framework */,
 				0D38DA1D1C4A348A004365A6 /* Realm.framework */,
 				0D5A78951C4A285400980481 /* UBERGuide */,
 				0D5A78AA1C4A285400980481 /* UBERGuideTests */,
@@ -407,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */,
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,

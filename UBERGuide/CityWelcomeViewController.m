@@ -7,8 +7,10 @@
 //
 
 #import "CityWelcomeViewController.h"
+#import "LookForRideViewController.h"
 
 @interface CityWelcomeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 
 @end
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)beginExploringButtonPressed:(id)sender {
+
 }
 
 - (void)didReceiveMemoryWarning {

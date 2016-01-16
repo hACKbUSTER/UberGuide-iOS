@@ -8,6 +8,7 @@
 
 #import "HelloSceneViewController.h"
 #import "FBShimmeringView.h"
+#import "CityWelcomeViewController.h"
 
 @interface HelloSceneViewController ()
 @property (weak, nonatomic) IBOutlet FBShimmeringView *shimmeringView;
@@ -31,6 +32,14 @@
     _shimmeringView.shimmeringPauseDuration = 0.2;
     _shimmeringView.shimmeringOpacity = 0.1;
     _shimmeringView.shimmeringEndFadeDuration = 0.1;
+    
+}
+
+- (void)presentCityWelcomeVC
+{
+    // call this when get location from CLLocationManager
+    CityWelcomeViewController *newViewController = [[CityWelcomeViewController alloc] init];
+    [self presentViewController:newViewController animated:NO completion:^(void){}];
 }
 
 - (void)didReceiveMemoryWarning {
