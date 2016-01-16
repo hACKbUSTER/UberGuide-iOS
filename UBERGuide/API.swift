@@ -15,7 +15,7 @@ class API {
                     let id = data.objectForKey("objectId") as! String
                     let icon = NSURL(string: data.objectForKey("imageSrc") as! String)!
                     let text = "\(data.objectForKey("zhLabel") as! String)\n\(data.objectForKey("enLabel") as! String)"
-                    tags.append(Tag(id: id, text: text, icon: icon))
+                    tags.append(Tag(id: id, text: text, icon: icon, enLabel: data.objectForKey("enLabel") as! String))
                     if tags.count == 9 {
                         break
                     }

@@ -24,7 +24,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
     self.title = @"Discover";
+    [self.navigationController.navigationBar setTranslucent:NO];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
     
     _driverProfileImageView.layer.masksToBounds = YES;
 }
