@@ -7,6 +7,41 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Ride Progress View Controller-->
+        <scene sceneID="Tkc-gO-JMN">
+            <objects>
+                <viewController id="1Wo-fD-wJ4" customClass="RideProgressViewController" customModule="UBERGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tey-3p-knh"/>
+                        <viewControllerLayoutGuide type="bottom" id="edf-wR-8Ga"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vva-lr-Qxh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hte-HA-Oh6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eh3-aJ-AaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1068" y="-793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kHb-tA-jXN">
+            <objects>
+                <navigationController id="Lpx-8a-2RJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JWY-vR-Co2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Wo-fD-wJ4" kind="relationship" relationship="rootViewController" id="zfH-7k-xqd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnV-rs-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1768" y="-793"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3mo-v1-P82">
             <objects>

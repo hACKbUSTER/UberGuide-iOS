@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HSv-Lq-Rrk" customClass="RideInfoProgress" customModule="UBERGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HSv-Lq-Rrk" id="uIP-HH-n3x">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-pP-Alr">
+                        <rect key="frame" x="16" y="0.0" width="100" height="43.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="2ak-9z-yhv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="HUf-pP-Alr" secondAttribute="bottom" id="FFL-3e-POd"/>
+                    <constraint firstItem="HUf-pP-Alr" firstAttribute="top" secondItem="uIP-HH-n3x" secondAttribute="top" id="Kya-5d-onQ"/>
+                    <constraint firstItem="HUf-pP-Alr" firstAttribute="leading" secondItem="uIP-HH-n3x" secondAttribute="leading" constant="16" id="VX0-hq-jWE"/>
+                    <constraint firstItem="HUf-pP-Alr" firstAttribute="centerY" secondItem="uIP-HH-n3x" secondAttribute="centerY" id="lxM-mY-1kV"/>
+                    <constraint firstAttribute="trailing" secondItem="HUf-pP-Alr" secondAttribute="trailing" id="obg-df-Ust"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="lxM-mY-1kV"/>
+                        <exclude reference="obg-df-Ust"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="container" destination="HUf-pP-Alr" id="Wxk-UB-S5r"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="215"/>
+        </tableViewCell>
+    </objects>
+</document>
