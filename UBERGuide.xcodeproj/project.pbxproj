@@ -29,6 +29,7 @@
 		501151B01C4A4B110049022A /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151AF1C4A4B110049022A /* AVOSCloud.framework */; };
 		501151B31C4A54840049022A /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 501151B21C4A54840049022A /* LocationManager.m */; };
 		501151BB1C4A669B0049022A /* UIView+ViewFrameGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 501151B91C4A669B0049022A /* UIView+ViewFrameGeometry.m */; };
+		501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 501151BD1C4A6DA40049022A /* lookingAnimationView.m */; };
 		5060B8F01C4A5165004B040C /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5060B8EB1C4A5165004B040C /* TagCell.xib */; };
 		5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8EC1C4A5165004B040C /* TagViewController.swift */; };
 		5060B8F21C4A5165004B040C /* TagViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060B8ED1C4A5165004B040C /* TagViews.swift */; };
@@ -86,6 +87,8 @@
 		501151B21C4A54840049022A /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		501151B91C4A669B0049022A /* UIView+ViewFrameGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameGeometry.m"; sourceTree = "<group>"; };
 		501151BA1C4A669B0049022A /* UIView+ViewFrameGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewFrameGeometry.h"; sourceTree = "<group>"; };
+		501151BC1C4A6DA40049022A /* lookingAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lookingAnimationView.h; sourceTree = "<group>"; };
+		501151BD1C4A6DA40049022A /* lookingAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lookingAnimationView.m; sourceTree = "<group>"; };
 		5060B8EB1C4A5165004B040C /* TagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
 		5060B8EC1C4A5165004B040C /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		5060B8ED1C4A5165004B040C /* TagViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViews.swift; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				0D5A789A1C4A285400980481 /* Main.storyboard */,
 				5060B8EB1C4A5165004B040C /* TagCell.xib */,
 				5060B8ED1C4A5165004B040C /* TagViews.swift */,
+				501151BC1C4A6DA40049022A /* lookingAnimationView.h */,
+				501151BD1C4A6DA40049022A /* lookingAnimationView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
+				501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

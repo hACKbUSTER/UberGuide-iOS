@@ -34,9 +34,9 @@
     _shimmeringView.shimmeringPauseDuration = 0.2;
     _shimmeringView.shimmeringOpacity = 0.1;
     _shimmeringView.shimmeringEndFadeDuration = 0.1;
-    
-    UISwipeGestureRecognizer *gesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    [self.view addGestureRecognizer:gesture];
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [self.view addGestureRecognizer:tap];
     
     [self.navigationController.interactivePopGestureRecognizer setDelegate:nil];
 }
@@ -46,15 +46,9 @@
     [super viewWillAppear:animated];
 }
 
-- (void)swipe:(UISwipeGestureRecognizer *)gesture
+- (void)tap:(id)sender
 {
-    if(gesture.state == UIGestureRecognizerStateEnded)
-    {
-        if(gesture.direction == UISwipeGestureRecognizerDirectionRight)
-        {
-            [self presentCityWelcomeVC];
-        }
-    }
+    [self presentCityWelcomeVC];
 }
 
 - (void)presentCityWelcomeVC
