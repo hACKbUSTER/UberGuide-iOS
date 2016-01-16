@@ -11,6 +11,7 @@
 #import "LookForRideViewController.h"
 #import "UIView+ViewFrameGeometry.h"
 #import "lookingAnimationView.h"
+#import "UBERGuide-Swift.h"
 
 @interface LookForRideViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *discoverTagLabel;
@@ -60,10 +61,22 @@
     _beginExplorationButton.hidden = YES;
     _cancelExplorationButton.hidden = NO;
     [_lookingAnimationView animate];
+    API *api = [[API alloc]init];
+    [api request];
+    
+    [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:10.0f];
+}
+
+- (void)updateStateToAccepted:(id)object
+{
+    API *api = [[API alloc]init];
+    [api updateStateWithState:@"in_progress"];
 }
 
 - (void)cancelExploration:(id)sender
 {
+//    API *api = [[API alloc]init];
+//    [api requestCurrent];
     _lookingAnimationView.hidden = YES;
     _beginExplorationButton.hidden = NO;
     _cancelExplorationButton.hidden = YES;

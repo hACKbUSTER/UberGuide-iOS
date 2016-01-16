@@ -16,6 +16,16 @@ import p2_OAuth2
         defaults.setValue(token, forKey: "uber_token")
     }
     
+    var request_id: String? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.stringForKey("request_id")
+    }
+    
+    func saveRequestId(request_id request_id: String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setValue(request_id, forKey: "request_id")
+    }
+    
     func authenticate(completionHandler: Void -> Void) {
         print("authenticate")
         

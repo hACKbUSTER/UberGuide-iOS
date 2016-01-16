@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-class API {
+@objc class API:NSObject {
     func tags(city city: String, completionHandler: [Tag] -> Void) {
         let parameters: [NSObject: AnyObject] = [:]
         
@@ -62,4 +62,57 @@ class API {
             }
         }
     }
+    
+    func updateState(state state: String) {
+        let parameters: [NSObject: AnyObject] = [
+            "request_id": UberAuth.sharedInstance.request_id!,
+            "state": state
+        ]
+        
+        AVCloud.callFunctionInBackground("uber::updateState", withParameters: parameters) { object, error in
+            if let object = object {
+                print(object)
+            }
+            
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+    
+    func request() {
+        let parameters: [NSObject: AnyObject] = [
+            "access_token": UberAuth.sharedInstance.token!
+        ]
+        
+        AVCloud.callFunctionInBackground("uber::request", withParameters: parameters) { object, error in
+            if let object = object {
+                let dictionary = object as! NSDictionary
+                let item = dictionary.objectForKey("data") as! NSDictionary
+                UberAuth.sharedInstance.saveRequestId(request_id: item.objectForKey("request_id") as! String)
+                print(object)
+            }
+            
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+    
+    func requestCurrent() {
+        let parameters: [NSObject: AnyObject] = [
+            "request_id": UberAuth.sharedInstance.request_id!
+        ]
+        
+        AVCloud.callFunctionInBackground("uber::current_trip", withParameters: parameters) { object, error in
+            if let object = object {
+                print(object)
+            }
+            
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+
 }
