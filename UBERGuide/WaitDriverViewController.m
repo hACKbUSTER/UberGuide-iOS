@@ -7,6 +7,7 @@
 //
 
 #import "WaitDriverViewController.h"
+#import "UBERGuide-Swift.h"
 
 @interface WaitDriverViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *mapWebView;
@@ -25,12 +26,34 @@
     // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    self.title = @"Discover";
+    self.title = @"Driver is on the way..";
     [self.navigationController.navigationBar setTranslucent:NO];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
     
     _driverProfileImageView.layer.masksToBounds = YES;
+    
+    if(self.dict == nil)
+    {
+        self.dict = [NSDictionary dictionary];
+    }
+    
+    
+    self.driverStarLabel.text = [NSString stringWithFormat:@"%@",[[self.dict objectForKey:@"driver"] objectForKey:@"rating"]];
+    self.driverNameLabel.text = [[self.dict objectForKey:@"driver"] objectForKey:@"name"];
+    self.carTypeLabel.text = [NSString stringWithFormat:@"%@ %@",[[self.dict objectForKey:@"vehicle"] objectForKey:@"make"],[[self.dict objectForKey:@"vehicle"] objectForKey:@"model"]];
+    
+    self.driverProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.driverProfileImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.dict objectForKey:@"driver"] objectForKey:@"picture_url"]]]]];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    API *api = [[API alloc]init];
+    [api requestMap:^(id object) {
+        [self.mapWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[object objectForKey:@"data"] objectForKey:@"href"]]]];
+    }];
 }
 
 - (void)viewDidLayoutSubviews

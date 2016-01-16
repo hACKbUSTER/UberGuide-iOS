@@ -12,8 +12,13 @@
 #import "UIView+ViewFrameGeometry.h"
 #import "lookingAnimationView.h"
 #import "UBERGuide-Swift.h"
+#import "WaitDriverViewController.h"
 
 @interface LookForRideViewController ()
+{
+    NSDictionary *dict;
+}
+
 @property (weak, nonatomic) IBOutlet UILabel *discoverTagLabel;
 @property (strong, nonatomic) UIButton *beginExplorationButton;
 @property (strong, nonatomic) UIButton *cancelExplorationButton;
@@ -29,6 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dict = [NSDictionary dictionary];
+    
     // Do any additional setup after loading the view.
     
     if(self.tripTitle == nil)
@@ -62,21 +69,33 @@
     _cancelExplorationButton.hidden = NO;
     [_lookingAnimationView animate];
     API *api = [[API alloc]init];
-    [api request];
-    
-    [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:10.0f];
+    [api updateStateWithState:@"completed" completionHandler:^{
+        [api request];
+        [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:10.0f];
+    }];
 }
 
 - (void)updateStateToAccepted:(id)object
 {
     API *api = [[API alloc]init];
-    [api updateStateWithState:@"in_progress"];
+    [api updateStateWithState:@"accepted" completionHandler:^{
+        [api updateStateWithState:@"arriving" completionHandler:^{
+            [self performSelector:@selector(requestCurrent:) withObject:nil afterDelay:2.0f];
+        }];
+    }];
+}
+
+- (void)requestCurrent:(id)sender
+{
+    API *api = [[API alloc]init];
+    [api requestCurrent:^(id object) {
+        dict = [object objectForKey:@"data"];
+        [self performSegueWithIdentifier:@"GetDriverSegue" sender:self];
+    }];
 }
 
 - (void)cancelExploration:(id)sender
 {
-//    API *api = [[API alloc]init];
-//    [api requestCurrent];
     _lookingAnimationView.hidden = YES;
     _beginExplorationButton.hidden = NO;
     _cancelExplorationButton.hidden = YES;
@@ -87,14 +106,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"GetDriverSegue"])
+    {
+        WaitDriverViewController *vc = (WaitDriverViewController *)segue.destinationViewController;
+        vc.dict = dict;
+    }
 }
-*/
+
 
 @end

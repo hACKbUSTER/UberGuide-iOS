@@ -63,7 +63,7 @@ import Alamofire
         }
     }
     
-    func updateState(state state: String) {
+    func updateState(state state: String, completionHandler: Void -> Void) {
         let parameters: [NSObject: AnyObject] = [
             "request_id": UberAuth.sharedInstance.request_id!,
             "state": state
@@ -71,6 +71,7 @@ import Alamofire
         
         AVCloud.callFunctionInBackground("uber::updateState", withParameters: parameters) { object, error in
             if let object = object {
+                completionHandler()
                 print(object)
             }
             
@@ -145,17 +146,37 @@ import Alamofire
         }
     }
     
-    func requestCurrent() {
+    func requestCurrent(completionHandler: AnyObject! -> Void) {
         let parameters: [NSObject: AnyObject] = [
             "request_id": UberAuth.sharedInstance.request_id!
         ]
         
         AVCloud.callFunctionInBackground("uber::current_trip", withParameters: parameters) { object, error in
             if let object = object {
+                completionHandler(object)
                 print(object)
             }
             
             if let error = error {
+                completionHandler(nil)
+                print(error)
+            }
+        }
+    }
+    
+    func requestMap(completionHandler: AnyObject! -> Void) {
+        let parameters: [NSObject: AnyObject] = [
+            "request_id": UberAuth.sharedInstance.request_id!,
+        ]
+        
+        AVCloud.callFunctionInBackground("uber::map", withParameters: parameters) { object, error in
+            if let object = object {
+                completionHandler(object)
+                print(object)
+            }
+            
+            if let error = error {
+                completionHandler(nil)
                 print(error)
             }
         }

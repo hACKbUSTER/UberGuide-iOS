@@ -144,7 +144,7 @@
                                 <rect key="frame" x="82" y="20" width="184" height="30"/>
                                 <state key="normal" title="button to next VC (for test)"/>
                                 <connections>
-                                    <segue destination="Lre-r2-vU4" kind="show" id="U3w-kj-vVo"/>
+                                    <segue destination="Lre-r2-vU4" kind="show" identifier="GetDriverSegue" id="U3w-kj-vVo"/>
                                 </connections>
                             </button>
                         </subviews>

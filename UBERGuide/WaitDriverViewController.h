@@ -10,4 +10,5 @@
 
 @interface WaitDriverViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *dict;
 @end
