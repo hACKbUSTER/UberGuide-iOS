@@ -11,4 +11,10 @@
 @interface WaitDriverViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UIWebView *mapWebView;
+@property (weak, nonatomic) IBOutlet UILabel *driverStarLabel;
+@property (weak, nonatomic) IBOutlet UILabel *driverNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *driverProfileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *carTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carPlateLabel;
 @end
