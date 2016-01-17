@@ -19,13 +19,14 @@
 @interface ARViewController ()<ARDataSourceDelegate,CLLocationManagerDelegate>
 
 @property (nonatomic) BOOL isLocated;
+@property (nonatomic) int dragCounter;
 
 @end
 
 @implementation ARViewController
 @synthesize ARView;
 @synthesize ARdata;
-@synthesize playerLocation,locationManager,isLocated;
+@synthesize playerLocation,locationManager,isLocated,dragCounter;
 
 
 - (void)viewDidLoad {
@@ -40,6 +41,33 @@
     [self ARBeginFrontView];
     [self dataTask];
     
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panRecognized:)];
+    [self.view addGestureRecognizer:pan];
+    
+}
+
+- (void)panRecognized:(UIPanGestureRecognizer *)rec
+{
+    CGPoint vel = [rec velocityInView:self.view];
+    if (vel.y > 0)
+    {
+        //NSLog(@"UP");
+        dragCounter ++ ;
+    }
+    else
+    {
+        //NSLog(@"DOWN");
+        dragCounter -- ;
+    }
+    
+    if (dragCounter > 20)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else if (dragCounter < -20)
+    {
+        dragCounter = 0;
+    }
 }
 #pragma mark - Start up animation
 - (void)startUpAnimation

@@ -16,6 +16,8 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
         
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.translucent = false
+        let ARButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Camera, target: self, action: "presentARVC")
+        self.navigationItem.rightBarButtonItem = ARButton
         
         tableViewController = UITableViewController(style: .Grouped)
         tableViewController.view.backgroundColor = UIColor(red:0.95, green:0.97, blue:0.98, alpha:1.0)
@@ -92,6 +94,13 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
             self.locationDetail.frame = CGRectMake(0, self.view.frame.size.height - LocationDetail.height, screenWidth, LocationDetail.height)
             }, completion: nil)
         self.view.addSubview(locationDetail)
+    }
+    
+    //this method presents ARViewController
+    func presentARVC()
+    {
+        let ARVC = ARViewController()
+        self .presentViewController(ARVC, animated: true, completion: nil)
     }
     
     func refresh() {
