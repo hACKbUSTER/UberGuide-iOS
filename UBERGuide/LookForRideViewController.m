@@ -85,8 +85,10 @@
 
     API *api = [[API alloc]init];
     [api updateStateWithState:@"rider_canceled" completionHandler:^{
-        [api request];
-        [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:5.0f];
+        [api updateStateWithState:@"completed" completionHandler:^{
+            [api request];
+            [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:5.0f];
+        }];
     }];
 }
 
