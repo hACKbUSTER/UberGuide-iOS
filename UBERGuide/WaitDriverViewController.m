@@ -11,6 +11,7 @@
 
 @interface WaitDriverViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
 
 @end
 
@@ -27,6 +28,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
     self.driverProfileImageView.layer.masksToBounds = YES;
+    self.mapImageView.clipsToBounds = YES;
     
     if(self.dict == nil)
     {
