@@ -48,6 +48,17 @@
             [self.driverProfileImageView setImage:image];
         });
     });
+    
+    // After 15 seconds perform this selector to update the state to in_progress
+    [self performSelector:@selector(updateState) withObject:nil afterDelay:15.0f];
+}
+
+- (void)updateState
+{
+    API *api = [[API alloc]init];
+    [api updateStateWithState:@"in_progress" completionHandler:^{
+        // TODO : Add your push code here
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
