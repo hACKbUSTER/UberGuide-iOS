@@ -84,6 +84,8 @@
     [carMainView addSubview:tireLeftImageView];
     
     
+    
+    // Parallax effect
     // Set vertical effect
     UIInterpolatingMotionEffect *verticalMotionEffect =
     [[UIInterpolatingMotionEffect alloc]
