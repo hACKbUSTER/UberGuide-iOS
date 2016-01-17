@@ -42,6 +42,7 @@
     [self locationService];
     [self ARBeginFrontView];
     [self dataTask];
+    [self dataTask];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panRecognized:)];
     [self.view addGestureRecognizer:pan];
@@ -49,7 +50,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(dataTask) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(dataTask) userInfo:nil repeats:YES];
 }
                                                                                         
 - (void)viewDidDisappear:(BOOL)animated
@@ -168,7 +169,7 @@
     if (index && playerLocation)
     {
         NSLog(@"if (index && playerLocation)");
-        NSString *titleString = [[index valueForKey:@"properties"] valueForKey:@"Title"];
+        NSString *titleString = [[index valueForKey:@"properties"] valueForKey:@"name"];
         //NSLog(@"%@",titleString);
         UIView *ARNodeView = [[UIView alloc] init];
         ARNodeView.backgroundColor = [UIColor whiteColor];
@@ -178,10 +179,37 @@
         title.textAlignment = NSTextAlignmentCenter;
         [ARNodeView addSubview:title];
         
+        NSArray *tagsArray = [[index valueForKey:@"properties"] valueForKey:@"tags"];
+        NSString *lastTag = [tagsArray lastObject];
         
         UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 80, 80)];
-        iconImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%u",arc4random()%9+1]];
+        
+        //STUPID CODE
+        if ([lastTag isEqualToString:@"gourmet"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"1"];
+        }else if ([lastTag isEqualToString:@"scenery"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"2"];
+        }else if ([lastTag isEqualToString:@"technology"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"3"];
+        }else if ([lastTag isEqualToString:@"humanity"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"4"];
+        }else if ([lastTag isEqualToString:@"education"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"5"];
+        }else if ([lastTag isEqualToString:@"museum"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"6"];
+        }else if ([lastTag isEqualToString:@"recreation"])
+        {
+            iconImageView.image = [UIImage imageNamed:@"7"];
+        }
+        
         [ARNodeView addSubview:iconImageView];
+        
         
         
         //NSLog(@"if (index && playerLocation)");

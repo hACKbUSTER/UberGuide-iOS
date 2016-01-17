@@ -22,7 +22,7 @@
     self.ARView = view;
     self.nodeLocation = nodeCLLocation;
     self.playerLocation = playerCLLocation;
-    planeGeometry = [SCNPlane planeWithWidth:view.bounds.size.width/4 height:view.bounds.size.height/4];
+    planeGeometry = [SCNPlane planeWithWidth:view.bounds.size.width height:view.bounds.size.height];
     planeGeometry.cornerRadius = 5;
     self.geometry = planeGeometry;
     SCNMaterial *planeMaterial = [SCNMaterial material];
@@ -69,7 +69,7 @@
     
     //NSLog(@"longitudeDistance : %f latitudeDistance : %f",longitudePosition,latitudePosition);
     
-    self.position = SCNVector3Make(longitudePosition, lineMeters / 6, latitudePosition);
+    self.position = SCNVector3Make(longitudePosition, lineMeters/2, latitudePosition);
 
     //self.position = SCNVector3Make(latitudePosition, lineMeters / 6, longitudePosition);
 

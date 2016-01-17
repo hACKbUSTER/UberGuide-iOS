@@ -62,7 +62,7 @@ static NSString *currentLocationVerticalAccuracy = @"currentLocationVerticalAccu
             self.locationManager = [[CLLocationManager alloc] init];//创建位置管理器
             _locationManager.delegate=self;
             _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
-            _locationManager.distanceFilter=1000.0f;
+            //_locationManager.distanceFilter=1000.0f;
             [_locationManager startUpdatingLocation];
             
         }
@@ -70,7 +70,7 @@ static NSString *currentLocationVerticalAccuracy = @"currentLocationVerticalAccu
 }
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"didUpdateLocations:(NSArray *)locations");
+    //NSLog(@"didUpdateLocations:(NSArray *)locations");
     CLLocation* newLocation = [locations lastObject];
     NSString *currentLatitude=[[NSString alloc]initWithFormat:@"%g",newLocation.coordinate.latitude];
     NSString *currentLongitude=[[NSString alloc]initWithFormat:@"%g",newLocation.coordinate.longitude];
