@@ -21,10 +21,10 @@
     // Do any additional setup after loading the view.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    self.title = @"Driver is on the way..";
+    self.title = @"Driver is on the way...";
     [self.navigationController.navigationBar setTranslucent:NO];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
     self.driverProfileImageView.layer.masksToBounds = YES;
     
@@ -35,7 +35,7 @@
     
     
     self.driverStarLabel.text = [NSString stringWithFormat:@"%@",[[self.dict objectForKey:@"driver"] objectForKey:@"rating"]];
-    self.driverNameLabel.text = [[self.dict objectForKey:@"driver"] objectForKey:@"name"];
+    self.driverNameLabel.text = [NSString stringWithFormat:@"Mr. %@",[[self.dict objectForKey:@"driver"] objectForKey:@"name"]];
     self.carTypeLabel.text = [NSString stringWithFormat:@"%@ %@",[[self.dict objectForKey:@"vehicle"] objectForKey:@"make"],[[self.dict objectForKey:@"vehicle"] objectForKey:@"model"]];
     
     self.driverProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -47,7 +47,7 @@
     [super viewWillAppear:animated];
     API *api = [[API alloc]init];
     [api requestMap:^(id object) {
-        [self.mapWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[object objectForKey:@"data"] objectForKey:@"href"]]]];
+        //[self.mapWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[object objectForKey:@"data"] objectForKey:@"href"]]]];
     }];
 }
 

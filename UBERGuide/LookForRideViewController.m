@@ -20,6 +20,7 @@
     BOOL hasBeenCanceled;
 }
 
+@property (weak, nonatomic) IBOutlet UIButton *toTheTripButton;
 @property (weak, nonatomic) IBOutlet UILabel *discoverTagLabel;
 @property (strong, nonatomic) UIButton *beginExplorationButton;
 @property (strong, nonatomic) UIButton *cancelExplorationButton;
@@ -47,7 +48,7 @@
     
     self.beginExplorationButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _beginExplorationButton.frame = CGRectMake(0.0f, ScreenHeight - 60.0f, ScreenWidth, 60.0f);
-    [_beginExplorationButton setTitle:@"Begin Your Exploration >" forState:UIControlStateNormal];
+    [_beginExplorationButton setTitle:@"Begin Your Exploration With Uber! >" forState:UIControlStateNormal];
     [_beginExplorationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _beginExplorationButton.backgroundColor = [UIColor colorWithRed:0.29f green:0.73f blue:0.89f alpha:1.0f];
     [_beginExplorationButton addTarget:self action:@selector(beginExploration:) forControlEvents:UIControlEventTouchUpInside];
@@ -67,6 +68,7 @@
     _lookingAnimationView.hidden = YES;
     
     [self.view addSubview:_beginExplorationButton];
+    _toTheTripButton.hidden = YES;
 }
 
 - (void)beginExploration:(id)sender
@@ -82,9 +84,9 @@
     }];
 
     API *api = [[API alloc]init];
-    [api updateStateWithState:@"completed" completionHandler:^{
+    [api updateStateWithState:@"rider_canceled" completionHandler:^{
         [api request];
-        [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:10.0f];
+        [self performSelector:@selector(updateStateToAccepted:) withObject:nil afterDelay:5.0f];
     }];
 }
 
@@ -109,6 +111,7 @@
             hasBeenCanceled = NO;
             return;
         }
+        _toTheTripButton.hidden = NO;
         [self performSegueWithIdentifier:@"GetDriverSegue" sender:self];
     }];
 }
@@ -116,8 +119,9 @@
 - (void)cancelExploration:(id)sender
 {
     API *api = [[API alloc]init];
+    _toTheTripButton.hidden = YES;
     hasBeenCanceled = YES;
-    [api updateStateWithState:@"completed" completionHandler:^{
+    [api updateStateWithState:@"rider_canceled" completionHandler:^{
         NSLog(@"canceled anyway!");
         
         _beginExplorationButton.hidden = NO;
@@ -154,5 +158,14 @@
     }
 }
 
+- (IBAction)ToTheTripButtonPressed:(id)sender {
+    if(dict)
+    {
+        if(!hasBeenCanceled)
+        {
+            [self performSegueWithIdentifier:@"GetDriverSegue" sender:self];
+        }
+    }
+}
 
 @end
