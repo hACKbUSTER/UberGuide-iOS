@@ -56,7 +56,7 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
         
         tableViewController.tableView.reloadData()
         
-        timer = NSTimer(timeInterval: 2, target: self, selector: "refresh", userInfo: nil, repeats: true)
+        timer = NSTimer(timeInterval: 8, target: self, selector: "refresh", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         
         self.navigationController?.interactivePopGestureRecognizer?.enabled = false;
