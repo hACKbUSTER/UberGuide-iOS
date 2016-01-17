@@ -40,8 +40,8 @@ import p2_OAuth2
         let settings = [
             "client_id": Constants.uberClientId,
             "client_secret": Constants.uberClientSecret,
-            "authorize_uri": "https://login.uber.com.cn/oauth/v2/authorize",
-            "token_uri": "https://login.uber.com.cn/oauth/token",
+            "authorize_uri": "https://login.uber.com/oauth/v2/authorize",
+            "token_uri": "https://login.uber.com/oauth/token",
             "redirect_uris": ["UBERGuide://oauth/callback"],
             "scope": "request",
         ] as OAuth2JSON
