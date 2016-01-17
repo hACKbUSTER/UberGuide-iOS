@@ -59,6 +59,7 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
         timer = NSTimer(timeInterval: 2, target: self, selector: "refresh", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         
+        self.navigationController?.interactivePopGestureRecognizer?.enabled = false;
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     

@@ -48,9 +48,6 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
     [self.view addGestureRecognizer:tap];
     
-    [self.navigationController.interactivePopGestureRecognizer setDelegate:nil];
-    
-    
     [self configureBaseView];
     [self configureAnimationView];
 }
@@ -161,6 +158,8 @@
 {
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:nil];
 }
 
 - (void)tap:(id)sender
