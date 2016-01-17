@@ -39,7 +39,13 @@
     self.carTypeLabel.text = [NSString stringWithFormat:@"%@ %@",[[self.dict objectForKey:@"vehicle"] objectForKey:@"make"],[[self.dict objectForKey:@"vehicle"] objectForKey:@"model"]];
     
     self.driverProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.driverProfileImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.dict objectForKey:@"driver"] objectForKey:@"picture_url"]]]]];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.dict objectForKey:@"driver"] objectForKey:@"picture_url"]]]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.driverProfileImageView setImage:image];
+        });
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated
