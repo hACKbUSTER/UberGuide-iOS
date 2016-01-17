@@ -77,7 +77,7 @@ class RideInfoLocation: UITableViewCell {
 }
 
 class LocationDetail: UIView {
-    static let height: CGFloat = 440
+    static let height: CGFloat = 500
     
     var title: UILabel!
     var icon: UIImageView!
@@ -132,8 +132,8 @@ class LocationDetail: UIView {
         
         detail.leftAnchor.constraintEqualToAnchor(leftAnchor, constant: 20).active = true
         detail.rightAnchor.constraintEqualToAnchor(rightAnchor, constant: -20).active = true
-        detail.topAnchor.constraintEqualToAnchor(icon.bottomAnchor).active = true
-        detail.heightAnchor.constraintEqualToConstant(140).active = true
+        detail.topAnchor.constraintEqualToAnchor(icon.bottomAnchor, constant: 20).active = true
+        detail.heightAnchor.constraintEqualToConstant(160).active = true
         
         continueButton = UIButton()
         continueButton.translatesAutoresizingMaskIntoConstraints = false

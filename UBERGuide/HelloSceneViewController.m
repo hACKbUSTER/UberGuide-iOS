@@ -44,6 +44,8 @@
     _shimmeringView.shimmeringPauseDuration = 0.2;
     _shimmeringView.shimmeringOpacity = 0.1;
     _shimmeringView.shimmeringEndFadeDuration = 0.1;
+    
+    self.navigationController.navigationBar.hidden = true;
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
     [self.view addGestureRecognizer:tap];
