@@ -9,6 +9,7 @@
 #import "ARViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "ARNode.h"
+#import "UBERGuide-Swift.h"
 #import "MJExtension.h"
 
 @import CoreLocation;
@@ -102,6 +103,19 @@
 #pragma mark - Data source downlad
 - (void)dataTask
 {
+    
+    API *api = [[API alloc]init];
+    [api requestCloseSpot:^(id object)
+    {
+        NSLog(@"%@",object);
+        if (object)
+        {
+            ARdata = [GeoJSON_Root mj_objectWithKeyValues:object];
+            [ARView reloadData];
+        }
+    }];
+    
+    
     /*
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];

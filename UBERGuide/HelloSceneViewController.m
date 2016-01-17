@@ -164,11 +164,7 @@
 
 - (void)tap:(id)sender
 {
-//    API *api = [[API alloc]init];
-//    [api requestCloseSpot:^(id object) {
-//        NSLog(@"%@",object);
-//    }];
-    
+
     [self presentCityWelcomeVC];
 }
 
