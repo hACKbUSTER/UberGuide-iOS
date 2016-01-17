@@ -18,7 +18,11 @@ import p2_OAuth2
     
     var request_id: String? {
         let defaults = NSUserDefaults.standardUserDefaults()
-        return defaults.stringForKey("request_id")
+        if defaults.objectForKey("request_id") == nil {
+            return " "
+        } else {
+            return defaults.stringForKey("request_id")
+        }
     }
     
     func saveRequestId(request_id request_id: String) {
