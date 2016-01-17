@@ -1,11 +1,13 @@
 import Foundation
 import UIKit
 
-class RideProgressViewController: UIViewController {
+class RideProgressViewController: UIViewController, UIViewControllerTransitioningDelegate {
     var tableViewController: UITableViewController!
     var ride: [RideInfo] = []
     var rideIndex = 0
     var cancelButton: UIButton!
+    var locationDetail: LocationDetail!
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +54,57 @@ class RideProgressViewController: UIViewController {
         
         tableViewController.tableView.reloadData()
         
-        let timer = NSTimer(timeInterval: 10, target: self, selector: "refresh", userInfo: nil, repeats: true)
+        timer = NSTimer(timeInterval: 2, target: self, selector: "refresh", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    func cancel() {
+    }
+    
+    func presentFinalDestination() {
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        
+        let dim = UIView()
+        dim.translatesAutoresizingMaskIntoConstraints = false
+        dim.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.30)
+        
+        self.view.addSubview(dim)
+        
+        dim.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
+        dim.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+        dim.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+        dim.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
+        
+        let info = ride.last!
+        
+        locationDetail = LocationDetail()
+        locationDetail.title.text = info.detailTitle
+        locationDetail.icon.af_setImageWithURL(info.icon!)
+        self.locationDetail.frame = CGRectMake(0, self.view.frame.size.height, screenWidth, LocationDetail.height)
+        
+        UIView.animateWithDuration(0.30, delay: 0, options: .CurveEaseInOut, animations: {
+            self.locationDetail.frame = CGRectMake(0, self.view.frame.size.height - LocationDetail.height, screenWidth, LocationDetail.height)
+            }, completion: nil)
+        self.view.addSubview(locationDetail)
     }
     
     func refresh() {
         API().rideInfo(index: rideIndex) {
-            self.ride.appendContentsOf($0)
-            self.tableViewController.tableView.reloadData()
-            
-            self.rideIndex += 1
-            
-            self.scrollToBottom()
+            if $0.count > 0 {
+                self.ride.appendContentsOf($0)
+                self.tableViewController.tableView.reloadData()
+                
+                self.rideIndex += 1
+                
+                self.scrollToBottom()
+                
+                if self.rideIndex == 4 {
+                    self.timer.invalidate()
+                    self.presentFinalDestination()
+                }
+            }
         }
     }
     
@@ -151,5 +192,21 @@ extension RideProgressViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+class LocationDetailViewController: UIViewController {
+    var locationDetail: LocationDetail!
+    
+    override func viewDidLoad() {
+        locationDetail = LocationDetail(frame: CGRect())
+        locationDetail.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(locationDetail)
+        
+        locationDetail.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
+        locationDetail.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+        locationDetail.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+        locationDetail.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
     }
 }

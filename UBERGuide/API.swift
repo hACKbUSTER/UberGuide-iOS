@@ -120,7 +120,7 @@ import Alamofire
                     if type == "message" {
                         let data = rawData.objectForKey("data") as! String
                         
-                        ride.append(RideInfo(type: type, message: data, icon: nil, lat: nil, lon: nil, description: nil, summary: nil, title: nil))
+                        ride.append(RideInfo(type: type, message: data, icon: nil, lat: nil, lon: nil, description: nil, summary: nil, title: nil, detailTitle: nil))
                     } else {
                         let data = rawData.objectForKey("data") as! NSDictionary
                         
@@ -130,8 +130,9 @@ import Alamofire
                         let summary = data.objectForKey("summary") as! String
                         let description = data.objectForKey("description") as! String
                         let title = "\(data.objectForKey("zhName") as! String) \(data.objectForKey("enName") as! String)"
+                        let detailTitle = "\(data.objectForKey("zhName") as! String)\n\(data.objectForKey("enName") as! String)"
                         
-                        ride.append(RideInfo(type: type, message: nil, icon: icon, lat: lat, lon: lon, description: description, summary: summary, title: title))
+                        ride.append(RideInfo(type: type, message: nil, icon: icon, lat: lat, lon: lon, description: description, summary: summary, title: title, detailTitle: detailTitle))
                     }
                 }
                 
