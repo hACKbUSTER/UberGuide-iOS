@@ -87,28 +87,41 @@
     
     // Parallax effect
     // Set vertical effect
-    UIInterpolatingMotionEffect *verticalMotionEffect =
+    UIInterpolatingMotionEffect *frontVerticalMotionEffect =
     [[UIInterpolatingMotionEffect alloc]
      initWithKeyPath:@"center.y"
      type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-    verticalMotionEffect.minimumRelativeValue = @(0);
-    verticalMotionEffect.maximumRelativeValue = @(20);
+    frontVerticalMotionEffect.minimumRelativeValue = @(0);
+    frontVerticalMotionEffect.maximumRelativeValue = @(30);
     
     // Set horizontal effect
-    UIInterpolatingMotionEffect *horizontalMotionEffect =
+    UIInterpolatingMotionEffect *frontHorizontalMotionEffect =
     [[UIInterpolatingMotionEffect alloc]
      initWithKeyPath:@"center.x"
      type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-    horizontalMotionEffect.minimumRelativeValue = @(-20);
-    horizontalMotionEffect.maximumRelativeValue = @(20);
+    frontHorizontalMotionEffect.minimumRelativeValue = @(-20);
+    frontHorizontalMotionEffect.maximumRelativeValue = @(20);
     
     // Create group to combine both
-    UIMotionEffectGroup *group = [UIMotionEffectGroup new];
-    group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+    UIMotionEffectGroup *frontGroup = [UIMotionEffectGroup new];
+    frontGroup.motionEffects = @[frontHorizontalMotionEffect, frontVerticalMotionEffect];
     
     // Add both effects to your view
-    [personImageView addMotionEffect:group];
+    [personImageView addMotionEffect:frontGroup];
+    
+    
+    UIInterpolatingMotionEffect *backVerticalMotionEffect =
+    [[UIInterpolatingMotionEffect alloc]
+     initWithKeyPath:@"center.y"
+     type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    backVerticalMotionEffect.minimumRelativeValue = @(0);
+    backVerticalMotionEffect.maximumRelativeValue = @(20);
+    UIMotionEffectGroup *backGroup = [UIMotionEffectGroup new];
+    backGroup.motionEffects = @[backVerticalMotionEffect];
+    
+    [roadImageView addMotionEffect:backGroup];
 
+    
 }
 
 - (void)configureAnimationView
@@ -132,6 +145,7 @@
     
     CABasicAnimation *carBodyAnimation;
     carBodyAnimation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    carBodyAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     carBodyAnimation.duration=2;
     carBodyAnimation.repeatCount=1;
     carBodyAnimation.autoreverses=NO;

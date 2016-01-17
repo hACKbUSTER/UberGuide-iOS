@@ -55,6 +55,7 @@ class TagViewController: UIViewController {
         nextButton = UIButton()
         nextButton.addTarget(self, action: "next", forControlEvents: .TouchUpInside)
         nextButton.setTitle("Remember What I Like", forState: .Normal)
+        nextButton.titleLabel?.font = UIFont.systemFontOfSize(15)
         nextButton.backgroundColor = UIColor(red:0.29, green:0.73, blue:0.89, alpha:0.65)
         nextButton.enabled = false
         nextButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
