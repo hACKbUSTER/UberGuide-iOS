@@ -137,6 +137,7 @@
         {
             ARdata = [GeoJSON_Root mj_objectWithKeyValues:object];
             [ARView reloadData];
+            
         }
     }];
     
