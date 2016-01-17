@@ -88,9 +88,6 @@
     [self.view.layer addSublayer:newCaptureVideoPreviewLayer];
     
     [session startRunning];
-    
-    
-    
 }
 
 #pragma mark - AR Front View Setup
