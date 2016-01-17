@@ -39,6 +39,9 @@
     {
         [self startUpAnimation];
     }
+    
+    api = [[API alloc]init];
+    
     [self ARBeginBackgroundCamera];
     [self locationService];
     [self ARBeginFrontView];
@@ -46,15 +49,13 @@
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panRecognized:)];
     [self.view addGestureRecognizer:pan];
-    
-    api = [[API alloc]init];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(dataTask) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(dataTask) userInfo:nil repeats:YES];
 }
+                                                                                        
 - (void)viewDidDisappear:(BOOL)animated
 {
     [timer invalidate];
