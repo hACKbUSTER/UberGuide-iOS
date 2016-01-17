@@ -49,6 +49,11 @@
     [self.view addGestureRecognizer:tap];
     
     [self configureBaseView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     [self configureAnimationView];
 }
 
@@ -164,7 +169,6 @@
 
 - (void)tap:(id)sender
 {
-
     [self presentCityWelcomeVC];
 }
 
