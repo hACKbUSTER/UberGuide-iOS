@@ -19,7 +19,7 @@ import p2_OAuth2
     var request_id: String? {
         let defaults = NSUserDefaults.standardUserDefaults()
         if defaults.objectForKey("request_id") == nil {
-            return " "
+            return ""
         } else {
             return defaults.stringForKey("request_id")
         }
