@@ -3,6 +3,12 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
+      "filename" : "Icon-Small-1.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
       "filename" : "Icon-Small@2x.png",
       "scale" : "2x"
     },
@@ -25,15 +31,27 @@
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
+      "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "Icon-60@2x-1.png",
+      "filename" : "Icon.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "Icon@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Icon-60@3x-1.png",
+      "filename" : "Icon-60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-60@3x.png",
       "scale" : "3x"
     },
     {
@@ -57,7 +75,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Icon-Spotlight-40@2x-2.png",
+      "filename" : "Icon-Spotlight-40@2x.png",
       "scale" : "2x"
     },
     {
@@ -76,57 +94,6 @@
       "idiom" : "ipad",
       "size" : "83.5x83.5",
       "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "car",
-      "filename" : "Icon-60@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "car",
-      "filename" : "Icon-60@3x.png",
-      "scale" : "3x"
-    },
-    {
-      "size" : "29x29",
-      "idiom" : "iphone",
-      "filename" : "Icon-Small-1.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "57x57",
-      "idiom" : "iphone",
-      "filename" : "Icon.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "50x50",
-      "idiom" : "ipad",
-      "filename" : "Icon-Small-50.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "72x72",
-      "idiom" : "ipad",
-      "filename" : "Icon-72.png",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "size" : "72x72",
-      "idiom" : "ipad",
-      "filename" : "Icon-72@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Icon-76@3x.png",
-      "unassigned" : true
     }
   ],
   "info" : {

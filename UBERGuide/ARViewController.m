@@ -223,7 +223,15 @@
         CLLocation * nodeLocation  = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
         
         
-        ARNodeView.frame = CGRectMake(0, 0, 100+title.frame.size.width, 100);
+        
+        if ([self width:titleString]>[self width:starLabel.text])
+        {
+            ARNodeView.frame = CGRectMake(0, 0, 100+title.frame.size.width, 100);
+        }else
+        {
+            ARNodeView.frame = CGRectMake(0, 0, 100+[self width:starLabel.text], 100);
+        }
+        
         
         [node setNodeWithARView:ARNodeView nodeLocation:nodeLocation playerLocation:playerLocation];
     }
