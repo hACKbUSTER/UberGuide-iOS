@@ -60,7 +60,7 @@
 {
     API *api = [[API alloc]init];
     [api updateStateWithState:@"in_progress" completionHandler:^{
-        // TODO : Add your push code here
+        [self performSegueWithIdentifier:@"RideProgressSegue" sender:self];
     }];
 }
 
