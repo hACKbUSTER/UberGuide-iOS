@@ -181,4 +181,21 @@ import Alamofire
             }
         }
     }
+    
+    func requestCloseSpot(completionHandler: AnyObject! -> Void) {
+        let parameters: [NSObject: AnyObject] = [:]
+        
+        AVCloud.callFunctionInBackground("ride::closeto::get", withParameters: parameters) { object, error in
+            
+            if let object = object {
+                completionHandler(object)
+                print(object)
+            }
+            
+            if let error = error {
+                completionHandler(nil)
+                print(error)
+            }
+        }
+    }
 }

@@ -44,7 +44,11 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.dict objectForKey:@"driver"] objectForKey:@"picture_url"]]]];
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.driverProfileImageView.alpha = 0.0f;
             [self.driverProfileImageView setImage:image];
+            [UIView animateWithDuration:0.3f animations:^{
+                self.driverProfileImageView.alpha = 1.0f;
+            }];
         });
     });
     
