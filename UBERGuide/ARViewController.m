@@ -20,6 +20,8 @@
 
 @property (nonatomic) BOOL isLocated;
 @property (nonatomic) int dragCounter;
+@property (nonatomic,strong) API *api;
+@property (nonatomic,strong) NSTimer *timer;
 
 @end
 
@@ -27,6 +29,7 @@
 @synthesize ARView;
 @synthesize ARdata;
 @synthesize playerLocation,locationManager,isLocated,dragCounter;
+@synthesize api,timer;
 
 
 - (void)viewDidLoad {
@@ -44,7 +47,20 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panRecognized:)];
     [self.view addGestureRecognizer:pan];
     
+    api = [[API alloc]init];
+    
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(dataTask) userInfo:nil repeats:YES];
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [timer invalidate];
+    NSLog(@"[timer invalidate];");
+}
+
 
 - (void)panRecognized:(UIPanGestureRecognizer *)rec
 {
@@ -125,11 +141,9 @@
     [self.view addSubview:ARView];
 }
 
-#pragma mark - Data source downlad
+#pragma mark - Data source download
 - (void)dataTask
 {
-    
-    API *api = [[API alloc]init];
     [api requestCloseSpot:^(id object)
     {
         NSLog(@"%@",object);
