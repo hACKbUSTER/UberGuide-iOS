@@ -173,7 +173,7 @@
         //NSLog(@"%@",titleString);
         UIView *ARNodeView = [[UIView alloc] init];
         ARNodeView.backgroundColor = [UIColor whiteColor];
-        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(100, 60, [self width:titleString], 40)];
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, [self width:titleString], 40)];
         title.text = titleString;
         title.font = [UIFont systemFontOfSize:fontSize];
         title.textAlignment = NSTextAlignmentCenter;
@@ -211,6 +211,9 @@
         [ARNodeView addSubview:iconImageView];
         
         
+        UILabel *starLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, title.frame.size.width, 60)];
+        starLabel.text = [NSString stringWithFormat:@"星级：🌟🌟🌟🌟🌟"];
+        [ARNodeView addSubview:starLabel];
         
         //NSLog(@"if (index && playerLocation)");
         NSMutableArray *coordinatesArray = [[index valueForKey:@"geometry"] valueForKey:@"coordinates"];
