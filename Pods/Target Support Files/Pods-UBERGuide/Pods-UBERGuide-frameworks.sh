@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-UBERGuide/Alamofire.framework"
   install_framework "Pods-UBERGuide/AlamofireImage.framework"
+  install_framework "Pods-UBERGuide/MJExtension.framework"
   install_framework "Pods-UBERGuide/Shimmer.framework"
   install_framework "Pods-UBERGuide/SwiftKeychain.framework"
   install_framework "Pods-UBERGuide/SwiftyJSON.framework"
@@ -94,6 +95,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-UBERGuide/Alamofire.framework"
   install_framework "Pods-UBERGuide/AlamofireImage.framework"
+  install_framework "Pods-UBERGuide/MJExtension.framework"
   install_framework "Pods-UBERGuide/Shimmer.framework"
   install_framework "Pods-UBERGuide/SwiftKeychain.framework"
   install_framework "Pods-UBERGuide/SwiftyJSON.framework"

@@ -10,6 +10,7 @@ pod 'Shimmer', '~> 1.0.2'
 pod 'AlamofireImage', '~> 2.2.0'
 pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'MJExtension'
 end
 
 target 'UBERGuideTests' do

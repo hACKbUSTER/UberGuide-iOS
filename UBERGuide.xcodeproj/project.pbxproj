@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D38DA1E1C4A348A004365A6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D38DA1D1C4A348A004365A6 /* Realm.framework */; };
 		0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */; };
+		0D4003221C4B4555002F7F13 /* ARFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40031D1C4B4555002F7F13 /* ARFrontView.m */; };
+		0D4003231C4B4555002F7F13 /* ARNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40031F1C4B4555002F7F13 /* ARNode.m */; };
+		0D4003241C4B4555002F7F13 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4003211C4B4555002F7F13 /* ARViewController.m */; };
+		0D40032D1C4B4681002F7F13 /* GeoJSON_Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4003261C4B4681002F7F13 /* GeoJSON_Geometry.m */; };
+		0D40032E1C4B4681002F7F13 /* GeoJSON_Index.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4003281C4B4681002F7F13 /* GeoJSON_Index.m */; };
+		0D40032F1C4B4681002F7F13 /* GeoJSON_Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40032A1C4B4681002F7F13 /* GeoJSON_Properties.m */; };
+		0D4003301C4B4681002F7F13 /* GeoJSON_Root.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40032C1C4B4681002F7F13 /* GeoJSON_Root.m */; };
 		0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5A78961C4A285400980481 /* AppDelegate.swift */; };
 		0D5A789C1C4A285400980481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A789A1C4A285400980481 /* Main.storyboard */; };
 		0D5A789E1C4A285400980481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D5A789D1C4A285400980481 /* Assets.xcassets */; };
@@ -68,6 +75,20 @@
 		0D38DA1D1C4A348A004365A6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0D38DA221C4A415E004365A6 /* HelloSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloSceneViewController.h; sourceTree = "<group>"; };
 		0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloSceneViewController.m; sourceTree = "<group>"; };
+		0D40031C1C4B4555002F7F13 /* ARFrontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFrontView.h; sourceTree = "<group>"; };
+		0D40031D1C4B4555002F7F13 /* ARFrontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFrontView.m; sourceTree = "<group>"; };
+		0D40031E1C4B4555002F7F13 /* ARNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARNode.h; sourceTree = "<group>"; };
+		0D40031F1C4B4555002F7F13 /* ARNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARNode.m; sourceTree = "<group>"; };
+		0D4003201C4B4555002F7F13 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		0D4003211C4B4555002F7F13 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		0D4003251C4B4681002F7F13 /* GeoJSON_Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSON_Geometry.h; sourceTree = "<group>"; };
+		0D4003261C4B4681002F7F13 /* GeoJSON_Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSON_Geometry.m; sourceTree = "<group>"; };
+		0D4003271C4B4681002F7F13 /* GeoJSON_Index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSON_Index.h; sourceTree = "<group>"; };
+		0D4003281C4B4681002F7F13 /* GeoJSON_Index.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSON_Index.m; sourceTree = "<group>"; };
+		0D4003291C4B4681002F7F13 /* GeoJSON_Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSON_Properties.h; sourceTree = "<group>"; };
+		0D40032A1C4B4681002F7F13 /* GeoJSON_Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSON_Properties.m; sourceTree = "<group>"; };
+		0D40032B1C4B4681002F7F13 /* GeoJSON_Root.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSON_Root.h; sourceTree = "<group>"; };
+		0D40032C1C4B4681002F7F13 /* GeoJSON_Root.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSON_Root.m; sourceTree = "<group>"; };
 		0D5A78931C4A285400980481 /* UBERGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBERGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5A78961C4A285400980481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D5A789B1C4A285400980481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,6 +188,8 @@
 				0D5C53F81C4A53B400ED92CF /* LookForRideViewController.m */,
 				0DA570141C4A8D4A007BD988 /* WaitDriverViewController.h */,
 				0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */,
+				0D4003201C4B4555002F7F13 /* ARViewController.h */,
+				0D4003211C4B4555002F7F13 /* ARViewController.m */,
 				5060B8EC1C4A5165004B040C /* TagViewController.swift */,
 				5060B8FA1C4A985C004B040C /* RideProgressViewController.swift */,
 			);
@@ -183,6 +206,10 @@
 				5060B9061C4ABB60004B040C /* RideInfoLocation.xib */,
 				5060B8ED1C4A5165004B040C /* TagViews.swift */,
 				5060B9001C4A9D1C004B040C /* RideInfoViews.swift */,
+				0D40031E1C4B4555002F7F13 /* ARNode.h */,
+				0D40031F1C4B4555002F7F13 /* ARNode.m */,
+				0D40031C1C4B4555002F7F13 /* ARFrontView.h */,
+				0D40031D1C4B4555002F7F13 /* ARFrontView.m */,
 				501151BC1C4A6DA40049022A /* lookingAnimationView.h */,
 				501151BD1C4A6DA40049022A /* lookingAnimationView.m */,
 				501151BF1C4A93660049022A /* circleLoadingView.h */,
@@ -205,11 +232,27 @@
 		0D38DA281C4A4301004365A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0D4003311C4B4686002F7F13 /* GeoJsonModel */,
 				5060B8EE1C4A5165004B040C /* Tag.swift */,
 				5060B8F51C4A7BBB004B040C /* UberAuth.swift */,
 				5060B8FC1C4A9B3A004B040C /* RideInfo.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		0D4003311C4B4686002F7F13 /* GeoJsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D4003251C4B4681002F7F13 /* GeoJSON_Geometry.h */,
+				0D4003261C4B4681002F7F13 /* GeoJSON_Geometry.m */,
+				0D4003271C4B4681002F7F13 /* GeoJSON_Index.h */,
+				0D4003281C4B4681002F7F13 /* GeoJSON_Index.m */,
+				0D4003291C4B4681002F7F13 /* GeoJSON_Properties.h */,
+				0D40032A1C4B4681002F7F13 /* GeoJSON_Properties.m */,
+				0D40032B1C4B4681002F7F13 /* GeoJSON_Root.h */,
+				0D40032C1C4B4681002F7F13 /* GeoJSON_Root.m */,
+			);
+			name = GeoJsonModel;
 			sourceTree = "<group>";
 		};
 		0D5A788A1C4A285400980481 = {
@@ -506,23 +549,30 @@
 			files = (
 				0D5C53F91C4A53B400ED92CF /* LookForRideViewController.m in Sources */,
 				5060B9031C4AB1F4004B040C /* Extensions.swift in Sources */,
+				0D4003221C4B4555002F7F13 /* ARFrontView.m in Sources */,
 				5060B8FB1C4A985C004B040C /* RideProgressViewController.swift in Sources */,
 				0D5A78971C4A285400980481 /* AppDelegate.swift in Sources */,
+				0D40032D1C4B4681002F7F13 /* GeoJSON_Geometry.m in Sources */,
 				5060B8F21C4A5165004B040C /* TagViews.swift in Sources */,
+				0D4003241C4B4555002F7F13 /* ARViewController.m in Sources */,
 				501151C11C4A93660049022A /* circleLoadingView.m in Sources */,
 				5060B9011C4A9D1C004B040C /* RideInfoViews.swift in Sources */,
 				5060B8F61C4A7BBB004B040C /* UberAuth.swift in Sources */,
+				0D4003301C4B4681002F7F13 /* GeoJSON_Root.m in Sources */,
 				501151BB1C4A669B0049022A /* UIView+ViewFrameGeometry.m in Sources */,
 				501151B31C4A54840049022A /* LocationManager.m in Sources */,
 				0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */,
 				5060B8F31C4A5165004B040C /* Tag.swift in Sources */,
 				5060B8FD1C4A9B3A004B040C /* RideInfo.swift in Sources */,
+				0D4003231C4B4555002F7F13 /* ARNode.m in Sources */,
 				5060B8F11C4A5165004B040C /* TagViewController.swift in Sources */,
+				0D40032E1C4B4681002F7F13 /* GeoJSON_Index.m in Sources */,
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
 				5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */,
 				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
 				0DA570161C4A8D4A007BD988 /* WaitDriverViewController.m in Sources */,
+				0D40032F1C4B4681002F7F13 /* GeoJSON_Properties.m in Sources */,
 				501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
