@@ -35,7 +35,6 @@
         self.dict = [NSDictionary dictionary];
     }
     
-    
     self.driverStarLabel.text = [NSString stringWithFormat:@"%@",[[self.dict objectForKey:@"driver"] objectForKey:@"rating"]];
     self.driverNameLabel.text = [NSString stringWithFormat:@"Mr. %@",[[self.dict objectForKey:@"driver"] objectForKey:@"name"]];
     self.carTypeLabel.text = [NSString stringWithFormat:@"%@ %@",[[self.dict objectForKey:@"vehicle"] objectForKey:@"make"],[[self.dict objectForKey:@"vehicle"] objectForKey:@"model"]];
@@ -64,10 +63,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    API *api = [[API alloc]init];
-    [api requestMap:^(id object) {
-        //[self.mapWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[object objectForKey:@"data"] objectForKey:@"href"]]]];
-    }];
+    
+//    Because requesting map is meaningless in Sand Box Mode, and loading Map will cost a very long time, so we comment this out in order to make things simple.
+    
+//    API *api = [[API alloc]init];
+//    [api requestMap:^(id object) {
+//        [self.mapWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[object objectForKey:@"data"] objectForKey:@"href"]]]];
+//    }];
 }
 
 - (IBAction)ContactDriver:(id)sender {
