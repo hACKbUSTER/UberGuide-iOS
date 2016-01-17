@@ -27,6 +27,7 @@ static NSString *currentLocationHorizontalAccuracy = @"currentLocationHorizontal
 static NSString *currentLocationAltitude = @"currentLocationAltitude";
 static NSString *currentLocationVerticalAccuracy = @"currentLocationVerticalAccuracy";
 
+
 + (LocationManager *) sharedInstance
 {
     static dispatch_once_t  onceToken;
@@ -78,7 +79,7 @@ static NSString *currentLocationVerticalAccuracy = @"currentLocationVerticalAccu
     NSString *currentVerticalAccuracy =[[NSString alloc]initWithFormat:@"%g",newLocation.verticalAccuracy];
 
     
-    self.dict = [NSDictionary dictionaryWithObjects:@[currentLatitude,currentLongitude,currentHorizontalAccuracy,currentAltitude,currentVerticalAccuracy] forKeys:@[currentLocationLatitude,currentLocationLongitude,currentLocationHorizontalAccuracy,currentLocationAltitude,currentLocationVerticalAccuracy]];
+    self.dict = [NSDictionary dictionaryWithObjects:@[currentLatitude,currentLongitude,currentHorizontalAccuracy,currentAltitude,currentVerticalAccuracy,newLocation] forKeys:@[currentLocationLatitude,currentLocationLongitude,currentLocationHorizontalAccuracy,currentLocationAltitude,currentLocationVerticalAccuracy,currentLocation]];
     
 
     _geoCoder = [[CLGeocoder alloc] init];

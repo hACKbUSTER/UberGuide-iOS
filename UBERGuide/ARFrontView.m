@@ -58,7 +58,7 @@
         NSMutableArray *ARSectionNodeArray = [[NSMutableArray alloc] init];
         NSInteger nodeInSectionNumber = [self.dataSource respondsToSelector:@selector(ARFrontView:numberOfRowsInSection:)] ? [self.dataSource ARFrontView:self.scene numberOfRowsInSection:sectionNumber] : 0;
         
-        NSLog(@"nodeInSectionNumber : %ld",(long)nodeInSectionNumber);
+        //NSLog(@"nodeInSectionNumber : %ld",(long)nodeInSectionNumber);
         for (int k = 0; k < nodeInSectionNumber; k ++)
         {
             if ([self.dataSource respondsToSelector:@selector(ARFrontView:nodeForRowAtIndexPath:)])

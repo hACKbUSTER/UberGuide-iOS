@@ -15,7 +15,6 @@
 @property (nonatomic,strong) ARFrontView *ARView;
 @property (nonatomic,strong) GeoJSON_Root *ARdata;
 @property (nonatomic,strong) CLLocation * playerLocation;
-@property (nonatomic,strong) CLLocationManager *locationManager;
 
 @end
 

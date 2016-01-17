@@ -11,14 +11,14 @@
 #import "ARNode.h"
 #import "UBERGuide-Swift.h"
 #import "MJExtension.h"
+#import "LocationManager.h"
 
 @import CoreLocation;
 
 #define fontSize 25.0f
 
-@interface ARViewController ()<ARDataSourceDelegate,CLLocationManagerDelegate>
+@interface ARViewController ()<ARDataSourceDelegate>
 
-@property (nonatomic) BOOL isLocated;
 @property (nonatomic) int dragCounter;
 @property (nonatomic,strong) API *api;
 @property (nonatomic,strong) NSTimer *timer;
@@ -28,17 +28,13 @@
 @implementation ARViewController
 @synthesize ARView;
 @synthesize ARdata;
-@synthesize playerLocation,locationManager,isLocated,dragCounter;
+@synthesize playerLocation,dragCounter;
 @synthesize api,timer;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (!self.isLocated)
-    {
-        [self startUpAnimation];
-    }
     
     api = [[API alloc]init];
     
@@ -59,7 +55,7 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [timer invalidate];
-    NSLog(@"[timer invalidate];");
+    //NSLog(@"[timer invalidate];");
 }
 
 
@@ -94,25 +90,7 @@
 #pragma mark - CLLocationManager
 - (void)locationService
 {
-    playerLocation = [[CLLocation alloc] initWithLatitude:0 longitude:0];
-    isLocated = NO;
-    locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
-    locationManager.delegate = self; // we set the delegate of locationManager to self.
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
-    
-    [locationManager startUpdatingLocation];  //requesting location updates
-}
-
-#pragma mark - CLLocationManagerDelegate
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"Error: %@",error.description);
-}
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    isLocated = YES;
-    CLLocationDistance meters = [playerLocation distanceFromLocation:[locations lastObject]];
-    playerLocation = [locations lastObject];
-    [ARView reloadData];
+    playerLocation = [[LocationManager sharedInstance].dict objectForKey:@"currentLocation"];
 }
 
 #pragma mark - AR Camera Setup
@@ -145,13 +123,16 @@
 #pragma mark - Data source download
 - (void)dataTask
 {
+    playerLocation = [[LocationManager sharedInstance].dict objectForKey:@"currentLocation"];
     [api requestCloseSpot:^(id object)
     {
-        NSLog(@"%@",object);
+        //NSLog(@"%@",object);
         if (object)
         {
-            ARdata = [GeoJSON_Root mj_objectWithKeyValues:object];
+            NSDictionary *data = [object objectForKey:@"data"];
+            ARdata = [GeoJSON_Root mj_objectWithKeyValues:data];
             [ARView reloadData];
+            NSLog(@"reloadData");
             
         }
     }];
@@ -186,8 +167,9 @@
     GeoJSON_Index *index = [ARdata.features objectAtIndex:indexPath.row];
     if (index && playerLocation)
     {
+        NSLog(@"if (index && playerLocation)");
         NSString *titleString = [[index valueForKey:@"properties"] valueForKey:@"Title"];
-        NSLog(@"%@",titleString);
+        //NSLog(@"%@",titleString);
         UIView *ARNodeView = [[UIView alloc] init];
         ARNodeView.backgroundColor = [UIColor whiteColor];
         UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(100, 60, [self width:titleString], 40)];
@@ -202,7 +184,7 @@
         [ARNodeView addSubview:iconImageView];
         
         
-        NSLog(@"if (index && playerLocation)");
+        //NSLog(@"if (index && playerLocation)");
         NSMutableArray *coordinatesArray = [[index valueForKey:@"geometry"] valueForKey:@"coordinates"];
         double longitude = [[coordinatesArray firstObject] doubleValue];
         double latitude = [[coordinatesArray lastObject] doubleValue];
@@ -223,6 +205,7 @@
 {
     if (ARdata)
     {
+        NSLog(@"ARdata.features.count %lu",(unsigned long)ARdata.features.count);
         return ARdata.features.count;
     }else return 0;
 }
