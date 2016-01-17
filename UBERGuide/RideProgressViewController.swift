@@ -61,6 +61,7 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
     }
     
     func cancel() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     func presentFinalDestination() {
@@ -82,6 +83,9 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
         locationDetail = LocationDetail()
         locationDetail.title.text = info.detailTitle
         locationDetail.icon.af_setImageWithURL(info.icon!)
+        locationDetail.detail.text = info.description
+        locationDetail.continueButton.addTarget(self, action: "cancel", forControlEvents: .TouchUpInside)
+        locationDetail.cancelButton.addTarget(self, action: "cancel", forControlEvents: .TouchUpInside)
         self.locationDetail.frame = CGRectMake(0, self.view.frame.size.height, screenWidth, LocationDetail.height)
         
         UIView.animateWithDuration(0.30, delay: 0, options: .CurveEaseInOut, animations: {
@@ -92,18 +96,20 @@ class RideProgressViewController: UIViewController, UIViewControllerTransitionin
     
     func refresh() {
         API().rideInfo(index: rideIndex) {
+            if self.rideIndex == 4 {
+                self.timer.invalidate()
+                self.presentFinalDestination()
+                return
+            }
+            
             if $0.count > 0 {
+                
                 self.ride.appendContentsOf($0)
                 self.tableViewController.tableView.reloadData()
                 
                 self.rideIndex += 1
                 
                 self.scrollToBottom()
-                
-                if self.rideIndex == 4 {
-                    self.timer.invalidate()
-                    self.presentFinalDestination()
-                }
             }
         }
     }
