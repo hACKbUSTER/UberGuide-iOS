@@ -28,7 +28,7 @@
         self.scene = ARScene;
         self.delegate = self;
         self.playing = YES;
-        self.showsStatistics = YES;
+        self.showsStatistics = NO;
         
         self.dataSource = dataSource;
         self.backgroundColor = [UIColor clearColor];

@@ -211,7 +211,7 @@
         [ARNodeView addSubview:iconImageView];
         
         
-        UILabel *starLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, title.frame.size.width, 60)];
+        UILabel *starLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, [self width:@"星级：🌟🌟🌟🌟🌟"], 60)];
         starLabel.text = [NSString stringWithFormat:@"星级：🌟🌟🌟🌟🌟"];
         [ARNodeView addSubview:starLabel];
         
