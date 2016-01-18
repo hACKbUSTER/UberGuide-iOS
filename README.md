@@ -1,5 +1,7 @@
 # Smart Traveller
 
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/UBERGuide/Assets.xcassets/AppIcon.appiconset/Icon-60%402x.png)
+
 ## Intro
 
 It's the project we did for Uber Hackathon China 2016. This is the repo for iOS client.
@@ -15,8 +17,20 @@ So we build a simple App based on this idea, in order to create a better user ex
 
 Exploration of a city is what Uber API can bring us, more amazing, more convenient, more comfortable.
 
-## ScreenShots
-
 ## Tech Details
 
 The client is written in Swift and Objective-C, using CocoaPod to manage third party services. Some frameworks have huge files, so we added it into the gitignore and you should download and import them into the project manually. `Realm.framework`  and `AVOSCloud.framework`. Only if you add these two static framework can you build the project and build the bridge-file between Swift and Objective-C.
+
+## ScreenShots
+
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0458.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0459.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0460.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0461.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0462.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0463.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0464.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0465.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0466.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0467.PNG)
+![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0468.PNG)
