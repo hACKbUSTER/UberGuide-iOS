@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D38DA1E1C4A348A004365A6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D38DA1D1C4A348A004365A6 /* Realm.framework */; };
 		0D38DA241C4A415E004365A6 /* HelloSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */; };
 		0D4003221C4B4555002F7F13 /* ARFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40031D1C4B4555002F7F13 /* ARFrontView.m */; };
 		0D4003231C4B4555002F7F13 /* ARNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D40031F1C4B4555002F7F13 /* ARNode.m */; };
@@ -26,7 +25,6 @@
 		0DA570161C4A8D4A007BD988 /* WaitDriverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */; };
 		0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */; };
 		3657B4EC574DAD6F18C4EDEA /* Pods_UBERGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6669B33035B6963EA1BECE32 /* Pods_UBERGuide.framework */; };
-		5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501151991C4A33C50049022A /* RLMSupport.swift */; };
 		5011519C1C4A33D70049022A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5011519B1C4A33D70049022A /* libc++.tbd */; };
 		5011519F1C4A3FFD0049022A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5011519E1C4A3FFD0049022A /* SystemConfiguration.framework */; };
 		501151A11C4A401E0049022A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501151A01C4A401E0049022A /* MobileCoreServices.framework */; };
@@ -72,7 +70,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D38DA1D1C4A348A004365A6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0D38DA221C4A415E004365A6 /* HelloSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloSceneViewController.h; sourceTree = "<group>"; };
 		0D38DA231C4A415E004365A6 /* HelloSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloSceneViewController.m; sourceTree = "<group>"; };
 		0D40031C1C4B4555002F7F13 /* ARFrontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFrontView.h; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 		0DA570151C4A8D4A007BD988 /* WaitDriverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitDriverViewController.m; sourceTree = "<group>"; };
 		0DA93B821C4A447C0015E6AF /* CityWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWelcomeViewController.h; sourceTree = "<group>"; };
 		0DA93B831C4A447C0015E6AF /* CityWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWelcomeViewController.m; sourceTree = "<group>"; };
-		501151991C4A33C50049022A /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		5011519B1C4A33D70049022A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5011519E1C4A3FFD0049022A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		501151A01C4A401E0049022A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -154,7 +150,6 @@
 				501151A31C4A40270049022A /* CoreTelephony.framework in Frameworks */,
 				501151A11C4A401E0049022A /* MobileCoreServices.framework in Frameworks */,
 				5011519F1C4A3FFD0049022A /* SystemConfiguration.framework in Frameworks */,
-				0D38DA1E1C4A348A004365A6 /* Realm.framework in Frameworks */,
 				5011519C1C4A33D70049022A /* libc++.tbd in Frameworks */,
 				3657B4EC574DAD6F18C4EDEA /* Pods_UBERGuide.framework in Frameworks */,
 			);
@@ -222,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				5060B8EF1C4A5165004B040C /* API.swift */,
-				501151991C4A33C50049022A /* RLMSupport.swift */,
 				501151B11C4A54840049022A /* LocationManager.h */,
 				501151B21C4A54840049022A /* LocationManager.m */,
 			);
@@ -258,7 +252,6 @@
 		0D5A788A1C4A285400980481 = {
 			isa = PBXGroup;
 			children = (
-				0D38DA1D1C4A348A004365A6 /* Realm.framework */,
 				0D5A78951C4A285400980481 /* UBERGuide */,
 				0D5A78AA1C4A285400980481 /* UBERGuideTests */,
 				0D5A78B51C4A285400980481 /* UBERGuideUITests */,
@@ -427,6 +420,7 @@
 				TargetAttributes = {
 					0D5A78921C4A285400980481 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Q8H99663FH;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -570,7 +564,6 @@
 				0DA93B841C4A447C0015E6AF /* CityWelcomeViewController.m in Sources */,
 				5060B8F41C4A5165004B040C /* API.swift in Sources */,
 				5060B8F91C4A7F0E004B040C /* Constants.swift in Sources */,
-				5011519A1C4A33C50049022A /* RLMSupport.swift in Sources */,
 				0DA570161C4A8D4A007BD988 /* WaitDriverViewController.m in Sources */,
 				0D40032F1C4B4681002F7F13 /* GeoJSON_Properties.m in Sources */,
 				501151BE1C4A6DA40049022A /* lookingAnimationView.m in Sources */,
