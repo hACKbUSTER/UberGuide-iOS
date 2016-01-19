@@ -19,7 +19,7 @@ Exploration of a city is what Uber API can bring us, more amazing, more convenie
 
 ## Tech Details
 
-The client is written in Swift and Objective-C, using CocoaPod to manage third party services. Some frameworks have huge files, so we added it into the gitignore and you should download and import them into the project manually. `Realm.framework`  and `AVOSCloud.framework` [Download here](https://leancloud.cn/docs/sdk_down.html). Only if you add these two static framework can you build the project and build the bridge-file between Swift and Objective-C.
+The client is written in Swift and Objective-C, using CocoaPod to manage third party services. Some frameworks have huge files, so we added it into the gitignore and you should download and import them into the project manually.  `AVOSCloud.framework` [Download here](https://leancloud.cn/docs/sdk_down.html). Only if you add these two static framework can you build the project and build the bridge-file between Swift and Objective-C.
 
 ## ScreenShots
 
