@@ -23,14 +23,14 @@ The client is written in Swift and Objective-C, using CocoaPod to manage third p
 
 ## ScreenShots
 
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0458.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0459.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0460.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0461.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0462.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0463.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0464.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0465.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0466.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0467.PNG)
-![image](https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0468.PNG)
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0458.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0459.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0460.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0461.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0462.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0463.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0464.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0465.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0466.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0467.PNG">
+<img width="621" alt="img" src="https://raw.githubusercontent.com/hACKbUSTER/UberGuide-iOS/master/ScreenShots/IMG_0468.PNG">
